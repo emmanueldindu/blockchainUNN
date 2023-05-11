@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/login.css?version = 1.0.4">
+    <link rel="shortcut icon" href="/favicon.ico.png" type="image/x-icon" /> 
+</head>
+<style>
+    #visible1,#hidden1{
+    position: absolute; 
+    right: 1rem; 
+    top: 3.3rem;
+    width: 40px;
+    opacity: 0.5;
+}
+#visible1{
+    display: none;
+}
+</style>
+<body>
+    <header>
+        <h1>
+            Sign Up
+        </h1>
+    </header>
+    <section>
+        <form method="post">
+            <main>
+                <div>
+                    <label for="">Full name</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div style="position: relative">
+                    <label for="">Password</label>
+                    <input type="password" name="pwd" id="pw1" required>
+                    <img src="./images/icons8-invisible-50.png" alt="" id="visible1">
+                    <img src="./images/icons8-blind-50.png" alt="" id="hidden1">
+                </div>
+            </main>
+            <div>
+                <button type="submit" name="signup">Sign up </button>
+            </div>
+            <small id="hna">Already have an account? <a href="login">Log in</a></small>
+        <form>
+    </section>
+</body>
+<script>
+    const hidden = document.getElementById('hidden1')
+    const visible = document.getElementById('visible1')
+    const password = document.getElementById('pw1')
+    
+    hidden.addEventListener('click', ()=>{
+        hidden.style.display = 'none'
+        password.type = 'text'
+        visible.style.display = 'block'
+    })
+    
+    visible.addEventListener('click', ()=>{
+        visible.style.display = 'none'
+        password.type = 'password'
+        hidden.style.display = 'block'
+    })
+
+</script>
+</html>

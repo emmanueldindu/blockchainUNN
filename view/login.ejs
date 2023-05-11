@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="stylesheet" href="./css/login.css?version = 1.0.7">    
+    <link rel="shortcut icon" href="/favicon.ico.png" type="image/x-icon" /> 
+
+</head>
+<body>
+    <header>
+        <h1>
+            Admin Log in Page
+        </h1>
+    </header>
+    <section>
+        <form action="/login" method="post">
+            <main>
+                <div>
+                    <label for="">Username</label>
+                    
+                    <input type="text" name="name" id="name" required>
+                    <p class="warning"><?php echo (isset($error['err_email']) ? $error['err_email'] : "") ?></p>
+                </div>
+                <div style="position: relative;">
+                    <label for="">Password</label>
+                    <input type="password" name="pwd" id="pw" required>
+                    <p class="warning"><?php echo (isset($error['err_pwd']) ? $error['err_pwd'] : "" )?></p>
+                    <img src="./images/icons8-invisible-50.png" alt="" id="visible">
+                    <img src="./images/icons8-blind-50.png" alt="" id="hidden">
+                </div>
+            </main>
+            <div>
+                <button type="submit">Log in </button>
+            </div>
+            <!-- <small id="dna">Do not have an account <a href="signup">Sign up</a></small> -->
+        <form>
+    </section>
+</body>
+<script src="script.js"></script>
+<script>
+    const hidden = document.getElementById('hidden')
+    const visible = document.getElementById('visible')
+    const password = document.getElementById('pw')
+    
+    hidden.addEventListener('click', ()=>{
+        hidden.style.display = 'none'
+        password.type = 'text'
+        visible.style.display = 'block'
+    })
+    
+    visible.addEventListener('click', ()=>{
+        visible.style.display = 'none'
+        password.type = 'password'
+        hidden.style.display = 'block'
+    })
+
+</script>
+</html>

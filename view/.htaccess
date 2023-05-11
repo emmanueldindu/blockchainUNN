@@ -1,0 +1,17 @@
+# mod_rewrite starts here 
+
+RewriteEngine on 
+
+#dont run if name with directory exists 
+
+RewriteCond %{REQUEST_FILENAME} !-d 
+
+#check file name with .php extension
+
+RewriteCond %{REQUEST_FILENAME}\.php -f 
+
+#show page with .php extension
+
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+RewriteRule ^welcome.*$ index.php [NC]
