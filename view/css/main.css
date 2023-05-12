@@ -425,7 +425,7 @@ nav li a:hover{
     text-align: left;
     border-radius: 20px;
 }
-#budv h1, #buds h1, #bucs h1{
+#budv h1, #buds h1, #bucs h1,#buw h1{
     font-family: Montserrat;
     font-size: 22px;
     font-weight: 900;
@@ -468,7 +468,15 @@ nav li a:hover{
     border: .1px solid #5A4C1F;
     border-radius: 10px;
 }
-#bucs button, #buds button, #budv button :hover{
+#buw, #buw button{
+    color: black;
+    background-color: #e5e5e5;
+}
+#buw button{
+    border: .1px solid #5A4C1F;
+    border-radius: 10px;
+}
+#bucs button, #buds button, #budv button,#buw button :hover{
     cursor: pointer;
 }
 #budv button:hover{
@@ -485,6 +493,13 @@ nav li a:hover{
     background-color: #5A4C1F;
     color: white;
     transition: .5s linear;
+}
+#buw button:hover{
+    background-color: #b3b3b3;
+    color: white;
+    transition: .5s linear;
+    cursor: pointer;
+    border: none;
 }
 #teleb:hover{
     cursor: pointer;
@@ -662,6 +677,14 @@ nav li a:hover{
     display: flex;
     gap: 2rem;
 }
+#date_snippet{
+    color: white;
+    position: relative;
+    font-size: 14px;
+    font-family: Monument Extended;
+    line-height: 34px;
+    margin-block: -1rem;
+}
 .countdown{
     display: flex;
     flex-direction: column;
@@ -770,6 +793,81 @@ hr{
     height: 7px;
     background-color: #388E3C;
 }
+
+
+    /* In the news  */
+    .featured_articles{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .featured_articles header{
+        margin: auto;
+    }
+    .featured_articles header h1{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    font-weight: bolder;
+    line-height: 42px;
+    border-bottom: 5px solid #388E3C;
+    margin-bottom: 10px;
+    }
+    .featured_articles header p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    }
+    .featured_articles article{
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+    }
+    .featured_articles article main{
+        border: .5px solid #b4cfb5;
+        border-radius: 10px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 5px 10px 10px #fbf2f2;
+        min-width: 47%;
+    }
+    .newsimg{
+        width: 100px;
+        margin: auto;
+    }
+    .featured_articles article main p{
+        font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    }
+    .featured_articles #swipe{
+        display: none;
+    }
+    .featured_articles article main a{
+        color: #388E3C;
+        font-weight: 700;
+        margin-left: auto;
+        font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 30px;
+    text-decoration: underline;
+    }
+    .featured_articles article main span p{
+        font-weight: 900;
+        font-size: 18px;
+    } 
+    .featured_articles article main span small{
+        font-family: Montserrat;
+        font-weight: 700;
+        color: #2E7D32;
+    }
+
+    /* in the news end */
+
+
 .testimonials{
     display: flex;
     flex-direction: column;
@@ -1394,7 +1492,7 @@ footer hr {
     .two header{
         margin-left: 1rem;
     }
-    #budv h1, #buds h1, #bucs h1{
+    #budv h1, #buds h1, #bucs h1, #buw h1{
         font-size: 15px;
         line-height: 25px;
     }
@@ -1403,6 +1501,9 @@ footer hr {
     }
     #budv{
         margin-bottom: -.5rem;
+    }
+    #buw{
+        margin-top: -1rem;
     }
     .two button{
         font-size: 16px;
@@ -1413,7 +1514,7 @@ footer hr {
         justify-content: center;
         Padding-inline: 0rem;
     }
-    #budv,#budc,#bucs{
+    #budv,#budc,#bucs, #buw{
         margin-left: 0rem;
     }
     .two header{
@@ -1488,8 +1589,43 @@ footer hr {
         margin-bottom: -1.5rem;
         padding-left: .5rem;
     }
+    #date_snippet{
+        line-height: 22px;
+    }
     .three header h1{
         font-size: 22px;
+    }
+    .featured_articles{
+        margin-top: -7rem;
+    }
+    .featured_articles header h1{
+        font-size: 25px;
+        margin: auto;
+        width: 60%;
+    }
+    .featured_articles header p{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .featured_articles article{
+        overflow-x: scroll;
+        gap: 2rem;
+    }
+    .featured_articles article::-webkit-scrollbar{
+        visibility: hidden;
+        scroll-behavior: smooth;
+    }
+    .featured_articles article main{
+        min-width: 90%;
+        margin-left: 5%;
+    }
+    .featured_articles #swipe{
+        display: block;
+        width: 50px;
+        margin-left: auto;
+        margin-block: -2rem;
+        margin-right: 1rem;
     }
     .countdown h1{
         font-size: 23px;
@@ -2253,17 +2389,6 @@ footer hr {
         padding-bottom: 4rem;
         padding-inline: 3rem;
     }
-    /* .one>div{
-        justify-content: center;
-        width: 100%;
-        opacity: .2;
-        position: absolute;
-        top: 2rem;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
-    } */
     .one>div img{
         width:500px;
         height: 500px;
@@ -2316,7 +2441,7 @@ footer hr {
     #dive{
         font-size: 25px;
     }
-    #budv h1, #buds h1, #bucs h1{
+    #budv h1, #buds h1, #bucs h1, #buw h1{
         font-size: 20px;
     }
     .skills{
@@ -2618,7 +2743,7 @@ footer hr {
         width: 100%;
         font-size: 20px;
     } 
-    #budv h1, #buds h1, #bucs h1{
+    #budv h1, #buds h1, #bucs h1, #buw h1{
         font-size: 18px;
     }
     .two button{
@@ -2682,6 +2807,11 @@ footer hr {
     .otherst{
         margin-top: 2rem;
     }
+    /* fetured articles */
+    .featured_articles article{
+        gap: 1rem;
+    }
+
     #reviewsHeader{
         font-size: 20px;
     }
