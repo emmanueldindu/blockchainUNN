@@ -469,7 +469,7 @@ footer h1{
     font-family: Montserrat;
     font-weight: 900;
 }
-footer a{
+footer a, #numbers{
     font-family: Montserrat;
     text-decoration: none;
     font-size: 22px;
