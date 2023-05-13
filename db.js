@@ -4,7 +4,13 @@ const connect_url = 'mongodb+srv://masterdindu:chimnadindu@blockchain.btznmnu.mo
 
 
 const connectDb = (url) => {
-    return mongoose.connect(connect_url)
+    return mongoose.connect(connect_url,
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+    }
+    
+    )
 }
 
 
