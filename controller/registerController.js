@@ -60,6 +60,8 @@ const addUser = async (req, res, next) => {
       }
   };
   
+
+
   
   function validateUser(data) {
     const schema = Joi.object({
@@ -88,6 +90,8 @@ const getUpdatdeUser = async (req, res, next) => {
   }
   }
 
+
+  
 
 module.exports = {
     getAllUsers,

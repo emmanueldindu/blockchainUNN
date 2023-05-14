@@ -12,7 +12,7 @@ const userRoutes = require('./routes/routes')
 const session = require('express-session')
 const bcrypt = require('bcrypt')
 const { addUser } = require('./controller/registerController')
-
+const User = require('./models/user')
 const passport = require('passport')
 
 
@@ -84,7 +84,9 @@ const users = [
       return next();
     }
     res.redirect('/login');
-  }
+}
+  
+
   
   // Login route
   app.get('/login', (req, res) => {
@@ -134,6 +136,62 @@ app.get('/event', (req, res) => {
     res.render('event')
 })
 
+
+
+//get all user or data
+app.get('/api/data', async (req, res) => {
+  try {
+    const data = await User.find().exec();
+    res.json(data);
+  } catch (error) {
+    console.error('Error retrieving data:', error);
+    res.status(500).json({ error: 'Failed to retrieve data' });
+  }
+});
+
+
+
+//add a user
+app.post('/api/user', async (req, res) => {
+  try {
+    const newUser = await User.create(req.body)
+    
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Failed to create user' });
+
+  }
+})
+
+
+//update
+app.put('/api/users/:id', async (req, res) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, { new: true }).exec();
+    if (!updatedUser) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    res.json(updatedUser);
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).json({ error: 'Failed to update user' });
+  }
+});
+
+//delete
+app.delete('api/users/:id', async (req, res) => {
+  try {
+    const deletedUser = await User.findByIdAndDelete(req.params.id).exec();
+    if (!deletedUser) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+    res.json({message: 'User deleted successfully'})
+    
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: 'Failed to delete user' });
+  }
+})
 
 
 
