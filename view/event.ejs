@@ -13,14 +13,14 @@
       <img src="./images/icons8-menu-rounded-50.png" alt="" id="menu" onclick="menuOpen()">
       <img src="./images/icon-close.svg" alt="" id="close" onclick="menuClose()">
       <main>
-      <a href="./index"><img src="./images/navLogo.png" alt="" id="navlogo"></a>
+      <a href="./"><img src="./images/navLogo.png" alt="" id="navlogo"></a>
   </main>
       <ul id="navList">
           <li><a href="/">Home</a></li>
-          <li><a href="./about.html">About Us</a></li>
+          <li><a href="/about">About Us</a></li>
           <li><a href="index.html#comm">Community</a></li>
           <li><a href="/event">Events</a></li>
-          <li><a href="./team.html">Team</a></li>
+          <li><a href="/team">Team</a></li>
           <li><a href="#foot">Contact</a></li>
       </ul>
   </nav>
@@ -108,13 +108,6 @@
         </form>
       </article>
 
-      <% if (typeof success !== 'undefined' && success) { %>
-        <script>
-          window.onload = function() {
-            alert('Account has been successfully created');
-          }
-        </script>
-      <% } %>
       
     </section>
 

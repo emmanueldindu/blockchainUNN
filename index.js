@@ -32,95 +32,95 @@ app.use(express.urlencoded({ extended: false }))
 app.use(error)
 app.use(userRoutes.routes)
 
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: false
-}));
+// app.use(session({
+//     secret: 'your-secret-key',
+//     resave: false,
+//     saveUninitialized: false
+// }));
 
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
-const users = [
-    {
-      id: 1,
-      username: 'admin',
-      password: 'admin'
-    }
-  ];
+// const users = [
+//     {
+//       id: 1,
+//       username: 'admin',
+//       password: 'admin'
+//     }
+//   ];
   
-  // Local strategy setup
-  const LocalStrategy = require('passport-local').Strategy;
-  passport.use(new LocalStrategy((username, password, done) => {
-    const user = users.find(u => u.username === username);
-    if (!user) {
-      return done(null, false, { message: 'Incorrect username' });
-    }
+//   // Local strategy setup
+//   const LocalStrategy = require('passport-local').Strategy;
+//   passport.use(new LocalStrategy((username, password, done) => {
+//     const user = users.find(u => u.username === username);
+//     if (!user) {
+//       return done(null, false, { message: 'Incorrect username' });
+//     }
   
-    bcrypt.compare(password, user.password, (err, result) => {
-      if (err) {
-        return done(err);
-      }
+//     bcrypt.compare(password, user.password, (err, result) => {
+//       if (err) {
+//         return done(err);
+//       }
   
-      if (!result) {
-        return done(null, false, { message: 'Incorrect password' });
-      }
+//       if (!result) {
+//         return done(null, false, { message: 'Incorrect password' });
+//       }
   
-      return done(null, user);
-    });
-  }));
+//       return done(null, user);
+//     });
+//   }));
   
-  // Serialization and deserialization
-  passport.serializeUser((user, done) => {
-    done(null, user.id);
-  });
+//   // Serialization and deserialization
+//   passport.serializeUser((user, done) => {
+//     done(null, user.id);
+//   });
   
-  passport.deserializeUser((id, done) => {
-    const user = users.find(u => u.id === id);
-    done(null, user);
-  });
+//   passport.deserializeUser((id, done) => {
+//     const user = users.find(u => u.id === id);
+//     done(null, user);
+//   });
   
-  // Middleware to check if user is authenticated
-  function isAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-      return next();
-    }
-    res.redirect('/login');
-}
+//   // Middleware to check if user is authenticated
+//   function isAuthenticated(req, res, next) {
+//     if (req.isAuthenticated()) {
+//       return next();
+//     }
+//     res.redirect('/login');
+// }
   
 
   
-  // Login route
-  app.get('/login', (req, res) => {
-    res.render('login');
-  });
+//   // Login route
+//   app.get('/login', (req, res) => {
+//     res.render('login');
+//   });
   
-app.post('/login', (req, res, next) => {
+// app.post('/login', (req, res, next) => {
       
-    // console.log('Login route reached');
-    const username = req.body.name;
-    const password = req.body.pwd;
+//     // console.log('Login route reached');
+//     const username = req.body.name;
+//     const password = req.body.pwd;
   
-    const user = users.find(u => u.username === username);
-  if (!user || user.password !== password) {
-    return res.render('login', { message: 'Incorrect username or password' });
-  }
+//     const user = users.find(u => u.username === username);
+//   if (!user || user.password !== password) {
+//     return res.render('login', { message: 'Incorrect username or password' });
+//   }
 
-  req.login(user, (err) => {
-    if (err) {
-      return next(err);
-    }
+//   req.login(user, (err) => {
+//     if (err) {
+//       return next(err);
+//     }
 
-    return res.redirect('/admin');
-  });
-});
+//     return res.redirect('/admin');
+//   });
+// });
 
 
 
   // Admin route (protected)
-  app.get('/admin', isAuthenticated, (req, res) => {
-    res.render('team');
-  });
+  // app.get('/admin', isAuthenticated, (req, res) => {
+  //   res.render('team');
+  // });
   
 
 
@@ -138,7 +138,16 @@ app.get('/event', (req, res) => {
     res.render('event')
 })
 
+app.get('/team', (req, res) => {
+  res.render('team')
+})
 
+app.get('/about', (req, res) => {
+  res.render('about')
+})
+app.get('/success', (req, res) => {
+  res.render('success')
+})
 
 //get all user or data
 app.get('/api/data', async (req, res) => {

@@ -1,6 +1,46 @@
 const User  = require('../models/user');
 const Joi = require('joi');
 const mongoose = require('mongoose');
+const nodemailer = require('nodemailer')
+
+
+
+
+// const sendEmail = async (email, subject, message) => {
+
+
+
+//   const transporter = nodemailer.createTransport({
+
+//     service: 'gmail',
+
+//     auth: {
+//       user: 'blockchainunnorg@gmail.com',
+//       pass: 'gblbrdxbaihkqnsw',
+
+//     },
+
+//   })
+
+//   const mailOptions = {
+//     from: 'blockchainunnorg@gmail.com',
+//     to: email,
+//     subject: 'Thank You for registering for blockchainUNN2.0',
+//     text: `Thank you for registering bla bla bla`
+
+    
+//   }
+  
+
+//   try {
+//     await transporter.sendMail(mailOptions)
+//     console.log('mail sent successfully')
+//   } catch (error) {
+//     console.error(error)
+//   }
+
+
+// }
 
 
 
@@ -47,13 +87,49 @@ const addUser = async (req, res, next) => {
     } catch (error) {
       console.error('Error:', error);
       return res.status(500).json({ error: 'Internal server error' });
+  }
+  
+  try {
+    const to = req.body.email
+    const name = req.body.firstname
+  
+  
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+  
+      auth: {
+        user: 'blockchainunnorg@gmail.com',
+        pass: 'gblbrdxbaihkqnsw',
+      }
+      
+    })
+  
+    const mail_config = {
+      from: 'blockchainunnorg@gmail.com',
+      to: to,
+      subject: `Hello ${name}!!!!`,
+      text: 'thank you for registering'
     }
   
-  
+    transporter.sendMail(mail_config, function (error, info) {
+      if (error) {
+        console.log(error)
+      } else {
+        console.log('mail sent')
+      }
+    })
+    
+  } catch (error) {
+    console.log(error)
+  }
+
+ 
 
     try {
-        const savedUser = await newUser.save();
-      return  res.render('event', { success: true });
+      const savedUser = await newUser.save();
+      
+
+      return  res.render('success');
       } catch (error) {
         console.error('Error:', error);
         return res.status(500).json({ error: 'Internal server error' });
