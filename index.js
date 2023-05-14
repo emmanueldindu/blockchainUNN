@@ -14,9 +14,11 @@ const bcrypt = require('bcrypt')
 const { addUser } = require('./controller/registerController')
 const User = require('./models/user')
 const passport = require('passport')
-
+const cors = require('cors')
 
 // middleware
+
+app.use(cors())
 
 app.use(express.static('view'))
 app.use('/view/css', express.static(__dirname + 'view/css'))
