@@ -1,0 +1,128 @@
+@font-face {
+  font-family: Monument Extended;
+  src: url(./../fonts/MonumentExtended-Ultrabold.otf);
+}
+@font-face {
+  font-family: Montserrat Bold;
+  src: url(./../fonts/Montserrat/static/Montserrat-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+h1 {
+  font-size: 50px;
+  font-family: Monument Extended;
+  font-weight: 700;
+  color: #388e3c;
+  position: relative;
+  animation: reg 1s linear 10s infinite;
+}
+@keyframes reg {
+  100% {
+    transform: rotateX("40deg");
+  }
+}
+img {
+  position: relative;
+}
+#check {
+  /* border: 1px solid black; */
+  width: 150px;
+  background-color: #388e3c;
+  margin: auto;
+  padding: 32px 24px;
+  border-radius: 50%;
+}
+p {
+  font-family: Montserrat Bold;
+  line-height: 35px;
+  font-size: 25px;
+  color: rgb(104, 97, 97);
+  width: 60%;
+  margin: auto;
+}
+.tel {
+  width: 30px;
+  margin-left: 0.5rem;
+  margin-bottom: -.55rem;
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  /* border: 1px solid; */
+  width: 50%;
+  margin: auto;
+}
+.socials .a{
+    border: 1px solid;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #388e3c;
+    padding: 10px 30px;
+    border: 5px solid;
+}
+small{
+    font-family: Montserrat Bold;
+    font-size: 20px;
+    margin-top: -1rem;
+    color: gray;
+}
+span a{
+    font-size: 16px;
+    text-decoration: 2px solid underline #388e3c;
+    color: #388e3c;
+}
+
+@media (max-width: 670px) {
+  h1 {
+    font-size: 25px;
+    width: 90%;
+    margin: auto;
+  }
+  p {
+    width: 90%;
+    font-size: 14px;
+  }
+  .tel {
+    width: 20px;
+    margin-bottom: -.3rem;
+  }
+  .socials{
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+  }
+}
+@media (max-width: 1000px) {
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 20px;
+    }
+  a {
+    font-size: 25px;
+    width: 80%;
+    padding: 12px;
+    padding-bottom: 25px;
+  }
+}
