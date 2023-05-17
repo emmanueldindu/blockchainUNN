@@ -254,6 +254,37 @@ nav li a:hover{
     letter-spacing: 0.02em;
 }
 
+/* form update */
+.dropdown{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    background-color: #EEEEEE;
+}
+.dropdown select{
+    padding-block: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #EEEEEE;
+    font-family: Montserrat;
+    color: #484848;
+    cursor: pointer;
+}
+.dropdown label{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+}
+#specify,#specify2{
+    width: 400px;
+    margin-block: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
 /*  */
 .speakers, .instructors{
     display: flex;
@@ -618,11 +649,6 @@ footer p{
     }
     .eventinfo{
         width: 100%;
-        /* transform: translateY(-310vw); */
-        /* position: absolute;
-        top: 85%;
-        right: 0;
-        left: 5%; */
     }
     .eventinfo p{
         width: 100%;
@@ -645,6 +671,12 @@ footer p{
         font-size: 16px;
         background-color: #388E3C;
         color: white;
+    }
+    .dropdown{
+        width: 100%;
+    }
+    #specify,#specify2{
+        width: 100%;
     }
     .form::before{
         content: 'Register Now';
@@ -836,6 +868,12 @@ footer p{
         padding: 40px 25px;
         font-size: 24px;
     }
+    .dropdown{
+        width: 1000px;
+    }
+    #specify,#specify2{
+        width: 70%;
+    }
     .two input ::-webkit-input-placeholder{
         font-size: 20px;
     }
@@ -927,6 +965,12 @@ footer p{
         width: 800px;
         padding: 40px 25px;
         font-size: 24px;
+    }
+        .dropdown{
+        width: 800px;
+    }
+    #specify,#specify2{
+        width: 70%;
     }
     .two input ::-webkit-input-placeholder{
         font-size: 20px;
@@ -1167,6 +1211,12 @@ footer p{
     }
     .two input{
         width: 100%;
+    }
+    .dropdown{
+        width: 100%;
+    }
+    #specify,#specify2{
+        width: 70%;
     }
     #reg{
         background-color: #388E3C;

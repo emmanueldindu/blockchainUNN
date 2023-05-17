@@ -3,6 +3,9 @@ let menubar = document.getElementById('menu')
 let closeBar = document.getElementById('close')
 let navList = document.getElementById('navList')
 let allSections = document.querySelectorAll('section')
+let others = document.getElementById('others')
+let specified = document.getElementById('specify2')
+const register = document.getElementById('reg')
 
 document.cookie = 'cookie2=value2; Samesite=None; Secure'
 

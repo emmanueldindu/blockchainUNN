@@ -98,12 +98,53 @@
       </article>
       <article class="form" id="formfield">
         <form action="/addUser" method="post">
-          <input type="text" name="firstname" id="" placeholder="Firstname" required>
-          <input type="text" name="lastname" id="" placeholder="Lastname" required>
+          <input type="text" name="fullname" id="" placeholder="Fullname" required>
           <input type="email" name="email" id="" placeholder="Email address" required>
           <input type="text" name="phone" id="" placeholder="Phone number" required>
-          <input type="text" name="career" id="" placeholder="Career in Tech">
-          <input type="text" name="state" id="" placeholder="State of Resisdence" required>
+          <div class="dropdown">
+            <select name="Gender" id="">
+              <option value=".">Select a Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <!-- 2nd -->
+          <div class="dropdown">
+            <select name="Career" id="">
+              <option value=".">Tech Career interested in</option>
+              <option value="Coding/Development">Coding/Development</option>
+              <option value="Content Writing">Content Writing</option>
+              <option value="Design">Design</option>
+              <option value="Community Management">Community Management</option>
+            </select>
+            <input type="text" name="" id="specify" placeholder="Others(Please Specify Career)" class="specify" >
+          </div>
+          <!-- 3rd -->
+          <div class="dropdown">
+            <select name="Student" id="">
+              <option value=".">Are you a Student</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <!-- 4th -->
+          <div class="dropdown">
+            <select name="Resisdence" id="">
+              <option value=".">Where will you be attending from ?</option>
+              <option value="UNN/Nsukka">UNN/Nsukka</option>
+              <option value="UNEC/Enugu">UNEC/Enugu</option>
+              <option value="" id="others" ></option>
+            </select>
+            <input type="text" name="" id="specify2" placeholder="Others(Please Specify Career)" class="specify" >
+          </div>
+          <!-- 5th -->
+          <div class="dropdown">
+            <select name="attend" id="">
+              <option value=".">Will you attend both Day1 and Day2 ? </option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
           <input type="submit" value="Register Now" id="reg" name="register" onmouseover="regClicked()" onclick="regClicked()" onmouseleave="regUnclicked()" onsubmit="redirect()">
         </form>
       </article>
