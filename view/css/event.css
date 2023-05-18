@@ -318,6 +318,23 @@ nav li a:hover{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     width: 400px;
+    height: 270px;
+    object-fit: cover;
+}
+/* speakers */
+#ayodei{
+    width: 260px;
+    object-position: top;
+}
+#chris{
+    object-position: 0% 20%;
+}
+#ajulu{
+    object-position: 0 0%;
+}
+/* instructors */
+#david,#judi{
+    width: 270px;
 }
 #kt{
     width: 376px;
