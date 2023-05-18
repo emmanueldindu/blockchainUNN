@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const connect_url = 'mongodb+srv://masterdindu:chimnadindu@blockchain.btznmnu.mongodb.net/'
+const connect_url = 'mongodb+srv://blockchain:blockchainunn@blockchain.cgzkmio.mongodb.net/'
 
 
 const connectDb = (url) => {
