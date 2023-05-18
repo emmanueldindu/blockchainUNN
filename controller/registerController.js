@@ -104,7 +104,7 @@ const addUser = async (req, res, next) => {
       secure: false, // Start with a plaintext connection
       auth: {
         user: 'admin@blockchainUNN.org',
-        pass: 'BlockchainUNN&2022',
+        pass: 'BlockchainUNN&2023', // Update with the correct password
       },
       tls: {
         ciphers: 'TLSv1.2'
@@ -147,15 +147,15 @@ const addUser = async (req, res, next) => {
   
  
 
-    try {
-      const savedUser = await newUser.save();
+  try {
+    const savedUser = await newUser.save();
       
 
-      return res.render('success');
-    } catch (error) {
-      console.error('Error:', error);
-      return res.status(500).json({ error: 'Internal server error' });
-    }
+    return res.render('success');
+  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
+  }
   ;
   
 
@@ -177,7 +177,7 @@ const addUser = async (req, res, next) => {
     return schema.validate(data);
   }
   
-
+}
 const getUpdatdeUser = async (req, res, next) => {
   try {
     const id = req.params.id;
