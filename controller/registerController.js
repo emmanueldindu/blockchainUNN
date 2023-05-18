@@ -99,34 +99,32 @@ const addUser = async (req, res, next) => {
     const name = req.body.fullname;
   
     const transporter = nodemailer.createTransport({
-      host: 'smtp.hostinger.com',
-      port: 587,
-      secure: false, // Start with a plaintext connection
+      name: 'blockchainunn.org',
+      host: 'smtp.titan.email',
+      port: 465,
+      secure: true,
       auth: {
         user: 'admin@blockchainUNN.org',
-        pass: 'BlockchainUNN&2023', // Update with the correct password
+        pass: 'BlockchainUNN&2022',
       },
       tls: {
         ciphers: 'TLSv1.2'
       }
     });
   
-    // Upgrade the connection to SSL/TLS using STARTTLS
     transporter
       .verify()
       .then(() => {
-        transporter.options.secure = true; // Set secure mode to true
-        transporter.options.tls.rejectUnauthorized = false; // Skip certificate verification (if needed)
-        return transporter.verify(); // Verify the connection again
-      })
-      .then(() => {
         console.log('SMTP connection established securely');
-        // You can now send emails securely
         const mailConfig = {
           from: 'admin@blockchainUNN.org',
           to: to,
           subject: `Hello ${name}!!!!`,
-          text: 'Thank you for registering'
+          html: `
+            <p>Congratulations, you have just secured your spot for the biggest blockchain conference in South East Nigeria.</p>
+            <p>We can't wait to see you at the conference.</p>
+            <p> Join our WhatsApp and Telegram groups to meet and network with other tech enthusiasts like you. https://blockchainunn.org/index.html#comm</p>
+          `
         };
   
         transporter.sendMail(mailConfig, function (error, info) {
@@ -143,6 +141,7 @@ const addUser = async (req, res, next) => {
   } catch (error) {
     console.log(error);
   }
+  
   
   
  
