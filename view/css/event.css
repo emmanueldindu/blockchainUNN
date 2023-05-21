@@ -244,12 +244,13 @@ nav li a:hover{
     background-color: #EEEEEE;
     border: none;
     font-family: Montserrat;
-    font-weight: 600;
+    font-weight: 100;
+    outline: none;
 }
 .two input ::-webkit-input-placeholder{
     font-family: Montserrat;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 300;
     line-height: 20px;
     letter-spacing: 0.02em;
 }
@@ -317,14 +318,22 @@ nav li a:hover{
 .photo{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
-    width: 400px;
+    min-width: 400px;
     height: 270px;
     object-fit: cover;
+    object-position: 0 0;
 }
 /* speakers */
 #ayodei{
     width: 260px;
-    object-position: top;
+    object-position: 0 10%;
+}
+#clement{
+    width: 260px;
+    object-position: 0 10%;
+}
+#aronu{
+    object-position: 0 40%;
 }
 #chris{
     object-position: 0% 20%;
@@ -332,10 +341,30 @@ nav li a:hover{
 #ajulu{
     object-position: 0 0%;
 }
+#sam{
+    object-position: 0 0;
+}
+
 /* instructors */
 #david,#judi{
     width: 270px;
 }
+#chidie{
+    object-position: center;
+}
+#david{
+    object-position: center;
+}
+#mba{
+    object-position: 0 0;
+}
+#astonish{
+    object-position: 0 25%;
+}
+#john{
+    object-position: 0 20%;
+}
+/*  */
 #kt{
     width: 376px;
     height: 420px;
@@ -492,6 +521,21 @@ p{
     /* color: #388E3C; */
 }
 
+/* media patners */
+.mediapatners,.ecosystem{
+    display: flex;
+    align-items: center;
+}
+.mediapatners span, .ecosystem span{
+    display: flex;
+    align-items: center;
+}
+.mediapatners img{
+    width: 200px;
+}
+.ecos{
+    width: 100px;
+}
 
 /* new foooter */
 footer{
@@ -735,17 +779,29 @@ footer p{
     .three{
         width: 100%;
         flex-direction: column;
-        padding: 20px 10px;
+        padding: 5px 10px;
+        padding-bottom: 10px;
+        align-items: flex-start;
     }
     .photo{
         /* min-height: 100vw; */
         border-radius: 5px;
-        width: 100%;
+        min-width: 100%;
         height: 320px;
         object-fit: cover;
-        object-position: 0% 10%;
+        object-position: 0% 0;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        border-radius: 20px;
+    }
+    #clement{
+        object-position: center;
+    }
+    #judi{
+        object-position: 35%;
+    }
+    #chidie{
+        object-position: right;
     }
     .outline{
         margin-inline: -1rem;
@@ -799,6 +855,39 @@ footer p{
     }
     .sponsor1 img{
         width: 170px;
+    }
+    /* media and exosysten */
+    .mediapatners{
+        justify-content: center;
+        gap: 5rem;
+        margin-bottom: -5rem;
+    }
+    .mediapatners span{
+        gap: 2rem;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .mediapatners img{
+        width: 150px;
+        margin-right: 1rem;
+    }
+    #casset{
+        width: 190px;
+    }
+    .ecosystem span{
+        /* border: 1px solid; */
+        width: 90%;
+        align-items: center;
+        /* justify-content: space-between; */
+        /* gap: 4rem; */
+    }
+    .ecos{
+        min-width: 50px;
+    }
+    .ecosystem img{
+        width: 100px;
+        margin-inline: 1rem;
     }
 
     /* footer */
