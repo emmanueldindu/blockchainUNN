@@ -88,7 +88,7 @@ const addUser = async (req, res, next) => {
     });
   
     if (existingUser) {
-      return res.status(400).json({ error: 'User already registered' });
+      return res.send('<script>alert("email or phone number has already been used");</script>');
     }
   } catch (error) {
     console.error('Error:', error);
@@ -119,12 +119,26 @@ const addUser = async (req, res, next) => {
         const mailConfig = {
           from: 'admin@blockchainUNN.org',
           to: to,
-          subject: `Hello ${name}!!!!`,
+          subject: `Hello, ${name}!`,
           html: `
-            <p>Congratulations, you have just secured your spot for the biggest blockchain conference in South East Nigeria.</p>
-            <p>We can't wait to see you at the conference.</p>
-            <p> Join our WhatsApp and Telegram groups to meet and network with other tech enthusiasts like you. https://blockchainunn.org/index.html#comm</p>
-          `
+          <div style="text-align: center;">
+          <img src="https://blockchainunn.onrender.com/images/navLogo.png" alt="Company Logo" style="max-width: 200px;">
+        </div>
+        <div style="font-size: 16px; line-height: 1.5; color: black;">
+            <p style="margin-top: 20px;">We are happy to receive your registration for the <strong>BlockchainUNN Conference 2.0</strong>, holding from <strong>June 23rd to June 24th</strong>. We can't wait to see you there!</p>
+            <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/Eov8UP1ZBjVCKmqcN0eu6s">here</a> if you haven't.</p>
+            <p style="margin-top: 20px;">Ensure to pay close attention to your email, as well as the <a href="https://t.me/BlockchainUNN">telegram community</a>, in order not to miss important updates regarding the event.</p>
+            <p style="margin-top: 20px;">
+              Telegram: <a href="https://t.me/BlockchainUNN">https://t.me/BlockchainUNN</a><br>
+              Twitter: <a href="https://twitter.com/BlockchainUNN">https://twitter.com/BlockchainUNN</a><br>
+              Instagram: <a href="https://instagram.com/blockchainunn">https://instagram.com/blockchainunn</a>
+            </p>
+            <p style="margin-top: 20px;">With Love,</p>
+            <p style="margin-top: 10px;">Team, BlockchainUNN.</p>
+          </div>
+          <hr style="margin-top: 40px; border: none; border-top: 1px solid #ccc;">
+          <p style="text-align: center; font-size: 12px; color: #777;">You received this email because we received a request for your registration for the event. If you didn't request registration, you can safely delete this email.</p>
+            `
         };
   
         transporter.sendMail(mailConfig, function (error, info) {
