@@ -240,11 +240,15 @@ nav li a:hover{
 }
 .two input{
     width: 650px;
-    padding: 30px 15px;
+    padding: 20px 15px;
     background-color: #EEEEEE;
     border: none;
     font-family: Montserrat;
-    font-weight: 100;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    font-weight: 400;
     outline: none;
 }
 .two input ::-webkit-input-placeholder{
