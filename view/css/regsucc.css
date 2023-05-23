@@ -61,7 +61,7 @@ p {
 .tel {
   width: 30px;
   margin-left: 0.5rem;
-  margin-bottom: -.55rem;
+  margin-bottom: -.6rem;
 }
 .socials {
   display: flex;
@@ -72,13 +72,12 @@ p {
   margin: auto;
 }
 .socials .a{
-    border: 1px solid;
     font-size: 20px;
     text-decoration: none;
     color: white;
     background-color: #388e3c;
-    padding: 10px 30px;
-    border: 5px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 small{
     font-family: Montserrat Bold;
