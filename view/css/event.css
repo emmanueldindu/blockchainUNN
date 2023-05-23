@@ -354,7 +354,7 @@ nav li a:hover{
     width: 270px;
 }
 #chidie{
-    object-position: center;
+    object-position: 0 10%;
 }
 #david{
     object-position: center;
