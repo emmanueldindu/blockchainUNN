@@ -93,26 +93,40 @@ span a{
 }
 
 @media (max-width: 670px) {
+  section{
+    gap: 1rem;
+  }
   h1 {
-    font-size: 25px;
+    font-size: 16px;
     width: 90%;
     margin: auto;
+  }
+  #check {
+    width: 50px;
+    padding: 10px;
   }
   p {
     width: 90%;
     font-size: 14px;
+    line-height: 22px;
   }
   .tel {
     width: 20px;
     margin-bottom: -.3rem;
   }
   .socials{
-    flex-direction: column;
-    width: 60%;
+    /* flex-direction: column; */
+    width: 100%;
     align-items: center;
   }
+  .socials .a{
+    font-size: 12px;
+  }
+  small{
+    font-size: 12px;
+  }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1000px) and (min-width: 671px) {
     h1{
         font-size: 40px;
     }

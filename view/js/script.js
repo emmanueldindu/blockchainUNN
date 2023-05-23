@@ -237,27 +237,27 @@ let popupClose = document.getElementById('popupClose')
         let pop = document.getElementById('pop_up').style.display = 'none'
         let pop2 = document.getElementById('pop_up_con').style.display = 'none'
         
-        function popsUp (){
-            document.getElementById('pop_up').style.display = 'flex'
-            document.getElementById('pop_up_con').style.display = 'flex'
-            for(i=0; i<allSections.length; i++){
-                allSections[i].style.filter = 'opacity(.5) blur(3px)'
-            }
-        }
+//         function popsUp (){
+//             document.getElementById('pop_up').style.display = 'flex'
+//             document.getElementById('pop_up_con').style.display = 'flex'
+//             for(i=0; i<allSections.length; i++){
+//                 allSections[i].style.filter = 'opacity(.5) blur(3px)'
+//             }
+//         }
         
-        const popTIme = setTimeout(popsUp, 10000)
+//         const popTIme = setTimeout(popsUp, 10000)
         
-        popupClose.addEventListener('click', ()=>{
-            document.getElementById('pop_up').style.display = 'none'
-            document.getElementById('pop_up_con').style.display = 'none'
-            for(i=0; i<allSections.length; i++){
-                allSections[i].style.filter = 'opacity(1) blur(0px)'
-            }
-        })
+//         popupClose.addEventListener('click', ()=>{
+//             document.getElementById('pop_up').style.display = 'none'
+//             document.getElementById('pop_up_con').style.display = 'none'
+//             for(i=0; i<allSections.length; i++){
+//                 allSections[i].style.filter = 'opacity(1) blur(0px)'
+//             }
+//         })
         
-        function register(){
-            window.location.href = './event'
-        }
+//         function register(){
+//             window.location.href = './event'
+//         }
 
         // members run up 
         community_members.textContent = 1000
