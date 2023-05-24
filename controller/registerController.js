@@ -67,7 +67,9 @@ const addUser = async (req, res, next) => {
   // Validate user object using Joi
   const { error } = validateUser(data);
   if (error) {
-    return res.status(400).json({ error: error.details[0].message });
+    // return res.status(400).json({ error: error.details[0].message });
+    return res.send('<script>alert("Fill all the  required fields");</script>');
+
   }
   
   // Create a new user instance
@@ -181,15 +183,16 @@ const addUser = async (req, res, next) => {
   
   function validateUser(data) {
     const schema = Joi.object({
-      fullname: Joi.string().required(),
-      email: Joi.string().email().required(),
-      phone: Joi.string().required(),
-      gender: Joi.string().valid('Male', 'Female').required(),
-      career: Joi.string().required(),
-      student: Joi.string().valid('Yes', 'No').required(),
-      residence: Joi.string().valid('UNN/Nsukka', 'UNEC/Enugu', 'Others').required(),
-      attend: Joi.string().valid('Yes', 'No').required()
- 
+      
+        fullname: Joi.string().required(),
+        email: Joi.string().email().required(),
+        phone: Joi.string().required(),
+        gender: Joi.string().valid('Male', 'Female'),
+        career: Joi.string(),
+        student: Joi.string().valid('Yes', 'No'),
+        residence: Joi.string().valid('UNN/Nsukka', 'UNEC/Enugu', 'Others'),
+        attend: Joi.string().valid('Yes', 'No')
+      
     });
   
     return schema.validate(data);
