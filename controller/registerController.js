@@ -2,8 +2,8 @@ const User  = require('../models/user');
 const Joi = require('joi');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer')
-
-
+const path = require('path');
+const fs = require('fs');
 
 
 // const sendEmail = async (email, subject, message) => {
@@ -42,6 +42,11 @@ const nodemailer = require('nodemailer')
 
 // }
 
+const imagePath = path.join(__dirname, '..', 'view', 'images', 'logoo.PNG');
+const image = fs.readFileSync(imagePath);
+const imageBase64 = image.toString('base64');
+const imageSrc = `data:image/png;base64,${imageBase64}`;
+
 
 
 
@@ -51,7 +56,7 @@ const getAllUsers = async (req, res, next) => {
 }
 
 const getAlluserView = (req, res, next) => {
-    res.render('addUser')
+    res.render('registered')
 }
 
 const addUser = async (req, res, next) => {

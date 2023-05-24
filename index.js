@@ -23,8 +23,12 @@ const cors = require('cors')
 
 
 //testing new commit
-
-
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.setHeader('Expires', '0');
+  res.setHeader('Pragma', 'no-cache');
+  next();
+});
 
 app.use(cors())
 
