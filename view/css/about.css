@@ -1312,7 +1312,7 @@ footer hr {
         margin-bottom: 2rem;
     }
     .four{
-        gap: 4rem;
+        gap: 0rem;
         position: relative;
         overflow-y: hidden;
         margin-bottom: 4rem;
@@ -1336,6 +1336,7 @@ footer hr {
     .four header{
         flex-direction: column;
         position: relative;
+        margin-bottom: 4rem;
     }
     .four main{
         flex-direction: column;
@@ -1528,7 +1529,7 @@ footer hr {
     }
     .orgs{
         margin-top: 0;
-        gap: 1.5rem;
+        gap: 0;
         float: none;
         margin-left: -2rem;
         width: 100vw;
@@ -1537,6 +1538,7 @@ footer hr {
     }
     .orgs img{
         width: 20px;
+        margin-right: 1rem;
     }
     #footerfb{
         width: 20px;
