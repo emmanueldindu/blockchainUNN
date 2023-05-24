@@ -124,7 +124,7 @@ const addUser = async (req, res, next) => {
       .then(() => {
         console.log('SMTP connection established securely');
         const mailConfig = {
-          from: 'admin@blockchainUNN.org',
+          from: 'blockchainUNN <admin@blockchainUNN.org>',
           to: to,
           subject: `Hello, ${name}!`,
           html: `
