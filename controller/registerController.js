@@ -124,28 +124,25 @@ const addUser = async (req, res, next) => {
         const mailConfig = {
           from: 'admin@blockchainUNN.org',
           to: to,
-          subject:'Successfull Registration!',
+          subject: `Hello, ${name}!`,
           html: `
-          <div style="text-align: center; color: black;">
-          <img src="https://blockchainunn.org/images/navLogo.png" alt="Company Logo" style="max-width: 200px;">
+          <div style="text-align: center;">
+          <img src="https://blockchainunn.onrender.com/images/navLogo.png" alt="Company Logo" style="max-width: 200px;">
         </div>
-        
         <div style="font-size: 16px; line-height: 1.5; color: black;">
-          <h1 style="font-size: 25px">Hello ${name}</h1>
-          <p style="margin-top: 20px;">We are happy to receive your registration for the <strong>BlockchainUNN Conference 2.0</strong>, holding from <strong>June 23rd to June 24th</strong>. We can't wait to see you there!</p>
-          <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/Eov8UP1ZBjVCKmqcN0eu6s">here</a> if you haven't.</p>
-          <p style="margin-top: 20px;">Ensure to pay close attention to your email, as well as the <a href="https://t.me/BlockchainUNN">telegram community</a>, in order not to miss important updates regarding the event.</p>
-          <p style="margin-top: 20px;">
-            Telegram: <a href="https://t.me/BlockchainUNN">https://t.me/BlockchainUNN</a><br>
-            Twitter: <a href="https://twitter.com/BlockchainUNN">https://twitter.com/BlockchainUNN</a><br>
-            Instagram: <a href="https://instagram.com/blockchainunn">https://instagram.com/blockchainunn</a>
-          </p>
-          <p style="margin-top: 20px;">With Love,</p>
-          <p style="margin-top: 10px;">Team, BlockchainUNN.</p>
-        </div>
-        <hr style="margin-top: 40px; border: none; border-top: 1px solid #ccc;">
-        <p style="text-align: center; font-size: 12px; color: #777;">You received this email because we received a request for your registration for the event. If you didn't request registration, you can safely delete this email.</p>
-        
+            <p style="margin-top: 20px;">We are happy to receive your registration for the <strong>BlockchainUNN Conference 2.0</strong>, holding from <strong>June 23rd to June 24th</strong>. We can't wait to see you there!</p>
+            <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/Eov8UP1ZBjVCKmqcN0eu6s">here</a> if you haven't.</p>
+            <p style="margin-top: 20px;">Ensure to pay close attention to your email, as well as the <a href="https://t.me/BlockchainUNN">telegram community</a>, in order not to miss important updates regarding the event.</p>
+            <p style="margin-top: 20px;">
+              Telegram: <a href="https://t.me/BlockchainUNN">https://t.me/BlockchainUNN</a><br>
+              Twitter: <a href="https://twitter.com/BlockchainUNN">https://twitter.com/BlockchainUNN</a><br>
+              Instagram: <a href="https://instagram.com/blockchainunn">https://instagram.com/blockchainunn</a>
+            </p>
+            <p style="margin-top: 20px;">With Love,</p>
+            <p style="margin-top: 10px;">Team, BlockchainUNN.</p>
+          </div>
+          <hr style="margin-top: 40px; border: none; border-top: 1px solid #ccc;">
+          <p style="text-align: center; font-size: 12px; color: #777;">You received this email because we received a request for your registration for the event. If you didn't request registration, you can safely delete this email.</p>
             `
         };
   
