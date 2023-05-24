@@ -1303,6 +1303,9 @@ section{
         padding: 15px 15px;
         font-size: 20px;
     }
+    #pop_up_con{
+        display: none;
+    }
     .top main{
         margin-inline: -1rem;
         margin-top: 0rem;

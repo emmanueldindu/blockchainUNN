@@ -270,6 +270,10 @@ let popupClose = document.getElementById('popupClose')
             },.02)
         }
 
+        const members = document.getElementById('cu')
+
+        members.addEventListener('touchstart', countUp)
+
         
         
 
