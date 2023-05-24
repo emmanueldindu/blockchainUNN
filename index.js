@@ -28,6 +28,13 @@ const cors = require('cors')
 
 app.use(cors())
 
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.setHeader('Expires', '0');
+  res.setHeader('Pragma', 'no-cache');
+  next();
+});
+
 app.use(express.static('view'))
 app.use('/view/css', express.static(__dirname + 'view/css'))
 app.use('/view/js', express.static(__dirname + 'view/js'))
