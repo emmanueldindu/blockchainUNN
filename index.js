@@ -16,7 +16,20 @@ const User = require('./models/user')
 const passport = require('passport')
 const cors = require('cors')
 
+
+
 // middleware
+
+
+
+//testing new commit
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.setHeader('Expires', '0');
+  res.setHeader('Pragma', 'no-cache');
+  next();
+});
+
 
 app.use(cors())
 
@@ -207,7 +220,7 @@ app.delete('api/users/:id', async (req, res) => {
 
 
 
-
+//comit
 
 
 
