@@ -1523,10 +1523,12 @@ section{
     } */
     .two{
         flex-direction: column;
-        margin-inline: -1rem;
+        /* margin-inline: -1rem; */
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
         /* padding-inline: 1.5rem; */
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-bottom: -2rem;
         margin-top: -4rem;
     }
@@ -1643,9 +1645,10 @@ section{
         padding-left: 1rem;
         padding-right: 1rem;
         margin-bottom: -3rem;
+        gap: 0;
     }
     .three header{
-        margin-bottom: -1.5rem;
+        /* margin-bottom: -1.5rem; */
         padding-left: .5rem;
     }
     .three main{
@@ -1723,6 +1726,7 @@ section{
     #fulldet{
         font-size: 12px;
         transform: translateY(-3.5rem);
+        margin-bottom: 3rem;
     }
     #evearr{
         padding: 5px;
@@ -2008,7 +2012,7 @@ section{
     }
     .orgs{
         margin-top: 0;
-        gap: 1.5rem;
+        gap: 0rem;
         float: none;
         margin-left: -2rem;
         width: 100vw;
@@ -2017,6 +2021,7 @@ section{
     }
     .orgs img{
         width: 20px;
+        margin-right: 1rem;
     }
     #footerfb{
         width: 20px;
@@ -2032,9 +2037,8 @@ section{
     .contact{
         margin-top: -1rem;
         justify-content: flex-start;
-        width: 90vw;
+        width: 100vw;
         margin-bottom: 1rem;
-        margin-left: -2rem;
         text-align: left;
     }
     .contact h3{
@@ -2044,6 +2048,8 @@ section{
     }
     .contact a{
         font-size: 18px;
+        margin-left: -3rem;
+        /* margin-right: 1rem; */
     }
 }
 
