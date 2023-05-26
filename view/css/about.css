@@ -90,6 +90,8 @@ nav li a{
     font-weight: 700;
     line-height: 20px;
     color: black;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
 }
 nav li a:hover{
     color: #388E3C;
