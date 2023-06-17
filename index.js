@@ -161,6 +161,10 @@ app.get('/devbootcamp', (req, res) => {
   res.render('devbootcamp')
 })
 
+app.get('/contentbootcamp', (req, res) => {
+  res.render('contentbootcamp')
+})
+
 app.get('/team', (req, res) => {
   res.render('team')
 })

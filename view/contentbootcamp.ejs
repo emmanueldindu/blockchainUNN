@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link rel="stylesheet" href="./css/event.css"?version= 1.0.5 />
+    <link rel="shortcut icon" href="/favicon.ico.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <img src="./images/icons8-menu-rounded-50.png" alt="" id="menu" onclick="menuOpen()">
+      <img src="./images/icon-close.svg" alt="" id="close" onclick="menuClose()">
+      <main>
+      <a href="#home"><img src="./images/navLogo.png" alt="" id="navlogo"></a>
+  </main>
+      <ul id="navList">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/#communities">Community</a></li>
+          <li><a href="/event">Events</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="#foot">Contact</a></li>
+      </ul>
+  </nav>
+    <section class="one" id="home">
+      <article class="top_left">
+        <h2>Blockchain UNN Content writing Bootcamp</h2>
+        <h1>Raising pen magicians</h1>
+      </article>
+      <article class="top_right">
+        <main class="countdown">
+          <div>
+            <h1 id="days">00</h1>
+            <small>Days</small>
+          </div>
+          <div>
+            <h1 id="hours">00</h1>
+            <small>Hours </small>
+          </div>
+          <div>
+            <h1 id="minutes">00</h1>
+            <small>Mins</small>
+          </div>
+          <div>
+            <h1 id="seconds">00</h1>
+            <small>Seconds</small>
+          </div>
+        </main>
+        <main id="register">
+          <h1>REGISTER NOW</h1>
+        </main>
+      </article>
+    </section>
+    <section class="two">
+      <article class="eventdetails">
+        <main >
+          <div class="eventinfo">
+            <h1>Bootcamp Details</h1>
+            <div class="eveinfo">
+              <p><img src="./images/date.png" alt="" /> Kickoff: 11th of July 2023</p>
+              <p id="time"><img src="./images/time.png" alt="" /> 9:00 - 10:00pm</p>
+            </div>
+            <div class="eveinfo">
+              <p>
+                <img src="./images/venue.png" alt="" />Zoom, Twitter Space
+              </p>
+            </div>
+            <div class="eveinfo" id="phreg">
+              <a href="#formfield"><input type="submit" value="Register now" id="reg1"></a>
+            </div>
+          </div>
+        </main>
+        <main class="wte">
+          <h1>Bootcamp Overview</h1>
+          <p id="wtep">
+            BlockchainUNN will organize a 6-week content writing bootcamp for those present in our community, kicking off <b>July 11th, 2023</b>.
+            <br><br>
+            The bootcamp is aimed at helping participants kickstart their content writing career, and guide them to land their first (paying) role.
+            <br><br>
+            The bootcamp is divided into three sessions a practical, training and project-based session, looking to cover key areas such as the basics of web3 writing, soft skills required to thrive in the space, and building an attractive portfolio.
+          </p>
+        </main>
+      </article>
+      <article class="form" id="formfield">
+        <form action="/registered" method="post">
+          <input type="text" name="fullname" id="" placeholder="Fullname" required>
+          <input type="email" name="email" id="" placeholder="Email address" required>
+          <input type="text" name="phone" id="" placeholder="Phone number" required>
+          <div class="dropdown">
+            <select name="gender" id="" required>
+              <option value=".">Select a Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            
+          </div>
+          <!-- 3rd -->
+          <div class="dropdown" >
+            <select name="student" required id="">
+              <option value=".">Are you a Student</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <!-- 4th -->
+          <div class="dropdown">
+            <select name="attend" id=""  required>
+              <option value=".">How many hours in a week can you commit to this bootcamp? </option>
+              <option value="Yes">10 hours</option>
+              <option value="No">15 hours</option>
+              <option value="No">20 hours</option>
+              <option value="No">30 hours</option>
+            </select>
+          </div>
+          <input type="submit" value="Register Now" id="reg" name="register" onmouseover="regClicked()" onclick="regClicked()" onmouseleave="regUnclicked()" onsubmit="redirect()">
+        </form>
+      </article>
+
+      
+    </section>
+
+<section class="outline">
+  <header>
+    <h1>
+      Curriculum
+    </h1>
+  </header>
+  <main class="day1">
+  <article class="evelis">
+  <p>
+    1 <img src="./images/Line 8.png" alt=""> <span class="eve"> Introduction to web3 writing and the course</span>
+  </p>
+  <p>
+    2 <img src="./images/Line 8.png" alt=""> <span class="eve"> Researching to write your first article and twitter thread</span>
+  </p>
+  <p>
+    3 <img src="./images/Line 8.png" alt=""> <span class="eve"> Linkedin and Twitter optimization 
+    </span>
+  </p>
+  <p>
+    4 <img src="./images/Line 8.png" alt=""> <span class="eve"> How to use Upwork to get jobs</span>
+  </p>
+  <p>
+    5 <img src="./images/Line 8.png" alt=""> <span class="eve"> Soft skills for writers</span>
+  </p>
+  <p>
+    6 <img src="./images/Line 8.png" alt=""> <span class="eve"> Project </span>
+  </p>
+</article>
+</main>
+</section>
+
+
+<footer id="foot">
+  <h1>
+    Sponsor Contact details
+  </h1>
+  <div>
+    <a href="mailto:admin@blockchaunn.org">Send a mail: admin@blockchainunn.org</a>
+    <span id="numbers"><img src="./images/icons8-call-male-80.png" id="call" alt="">07064271385, 08050827048, 08124720809</span>
+    <span>
+      <a href="https://www.linkedin.com/in/BlockchainUNN"><img src="./images/linked3.png" alt="" id="ln"> </a>
+      <a href="https://www.twitter.com/BlockchainUNN"><img src="./images/twitter.png" alt="" id="footertw"> </a>
+      <a href="https://www.twitter.com/BlockchainUNN"><img src="./images/youtube.png" alt=""> </a>
+      <a href="https://www.facebook.com/BlockchainUNN"><img src="./images/facebook.png" alt="" id="footerfb"> </a>
+      <a href="https://www.instagram.com/BlockchainUNN"><img src="./images/instagram.png" alt="" id="footerig"> </a>
+    </span>
+  </div>
+  <hr>
+  <p>Copyright © 2023. BlockchainUNN. All rights reserved</p>
+</footer>
+
+
+  </body>
+
+   
+  <script src="./js/event.js"></script>
+  <script src="./js/devbootcamp.js"></script>
+</html>
