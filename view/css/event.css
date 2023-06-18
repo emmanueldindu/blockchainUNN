@@ -511,6 +511,7 @@ p{
 .sponsor1 main span{
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 .sponsors h1{
     font-family: Monument Extended;
@@ -947,6 +948,11 @@ footer p{
         width: 170px;
         margin-right: 1rem;
     }
+    #a11{
+        width: 100px;
+        margin-left: 1rem;
+    }
+    
     /* media and exosysten */
     .mediapatners{
         justify-content: center;
