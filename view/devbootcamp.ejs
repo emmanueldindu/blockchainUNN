@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link rel="stylesheet" href="./css/event.css"?version= 1.0.5 />
+    <link rel="shortcut icon" href="/favicon.ico.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav>
+      <img src="./images/icons8-menu-rounded-50.png" alt="" id="menu" onclick="menuOpen()">
+      <img src="./images/icon-close.svg" alt="" id="close" onclick="menuClose()">
+      <main>
+      <a href="#home"><img src="./images/navLogo.png" alt="" id="navlogo"></a>
+  </main>
+      <ul id="navList">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/#communities">Community</a></li>
+          <li><a href="/event">Events</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="#foot">Contact</a></li>
+      </ul>
+  </nav>
+    <section class="one" id="home">
+      <article class="top_left">
+        <h2>Blockchain UNN Developer Bootcamp</h2>
+        <h1>Raising experienced web2 and web3 developers.</h1>
+      </article>
+      <article class="top_right">
+        <main class="countdown">
+          <div>
+            <h1 id="days">00</h1>
+            <small>Days</small>
+          </div>
+          <div>
+            <h1 id="hours">00</h1>
+            <small>Hours </small>
+          </div>
+          <div>
+            <h1 id="minutes">00</h1>
+            <small>Mins</small>
+          </div>
+          <div>
+            <h1 id="seconds">00</h1>
+            <small>Seconds</small>
+          </div>
+        </main>
+        <main id="register">
+          <h1>REGISTER NOW</h1>
+        </main>
+      </article>
+    </section>
+    <section class="two">
+      <article class="eventdetails">
+        <main >
+          <div class="eventinfo">
+            <h1>Bootcamp Details</h1>
+            <div class="eveinfo">
+              <p><img src="./images/date.png" alt="" /> Kickoff: 11th of July 2023</p>
+              <p id="time"><img src="./images/time.png" alt="" /> 7:30pm - 9:30pm</p>
+            </div>
+            <div class="eveinfo">
+              <p>
+                <img src="./images/venue.png" alt="" />Zoom
+              </p>
+            </div>
+            <div class="eveinfo" id="phreg">
+              <a href="#formfield"><input type="submit" value="Register now" id="reg1"></a>
+            </div>
+          </div>
+        </main>
+        <main class="wte">
+          <h1>Bootcamp Overview</h1>
+          <p id="wtep">
+            BlockchainUNN will organize a 12-week bootcamp for intending web2 and web3 developers in the developer community kicking off <b>July 11th, 2023</b>.
+            <br><br>
+            The bootcamp will consist of both a web2 and web3 stream. Both programs will run simultaneously, on the same day and time. The proposed date and time is 7:30-9:30 pm on Tuesdays and Sundays.
+            <br><br>
+            WEB2 STREAM: The web2 stream is focused on students new to programming or already existing web2 devs looking to improve their skills. Since the goal is prepping the students for web3 development, we’d mostly be looking into the front-end side of web2 development.
+            <br><br>
+            WEB3 STREAM: The web3 stream is focused on already existing web2 devs looking to delve into web3 development. Knowledge of HTML, CSS, JS, and React is compulsory! We’ll be focused on building smart contracts on Ethereum using Solidity.
+            
+          </p>
+        </main>
+      </article>
+      <article class="form" id="formfield">
+        <form action="/registered" method="post">
+          <input type="text" name="fullname" id="" placeholder="Fullname" required>
+          <input type="email" name="email" id="" placeholder="Email address" required>
+          <input type="text" name="phone" id="" placeholder="Phone number" required>
+          <div class="dropdown">
+            <select name="gender" id="" required>
+              <option value=".">Select a Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            
+          </div>
+          <!-- 2nd -->
+          <div class="dropdown">
+            <select name="career" id="" required>
+              <option value=".">Stream interested in</option>
+              <option value="Coding/Development">Web 2</option>
+              <option value="Content Writing">Web 3</option>
+            </select>
+          </div>
+          <!-- 3rd -->
+          <div class="dropdown" >
+            <select name="student" required id="">
+              <option value=".">Are you a Student</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+          <!-- 4th -->
+          <div class="dropdown">
+            <select name="attend" id=""  required>
+              <option value=".">How many hours in a week can you commit to this bootcamp? </option>
+              <option value="Yes">10 hours</option>
+              <option value="No">15 hours</option>
+              <option value="No">20 hours</option>
+              <option value="No">30 hours</option>
+            </select>
+          </div>
+          <input type="submit" value="Register Now" id="reg" name="register" onmouseover="regClicked()" onclick="regClicked()" onmouseleave="regUnclicked()" onsubmit="redirect()">
+        </form>
+      </article>
+
+      
+    </section>
+
+<section class="outline">
+  <header>
+    <h1>
+      Curriculum
+    </h1>
+  </header>
+  <main class="day1">
+  <article>
+    <button id="btn1a" onclick="day1()">Web 2</button>
+    <button id="btn2a" onclick="day2()">Web 3</button>
+  </article>
+  <article class="evelis">
+  <p>
+    1 <img src="./images/Line 8.png" alt=""> <span class="eve"> Introduction to software development</span>
+  </p>
+  <p>
+    2 <img src="./images/Line 8.png" alt=""> <span class="eve"> Tools explanations, installation, and setup</span>
+  </p>
+  <p>
+    3 <img src="./images/Line 8.png" alt=""> <span class="eve"> HTML5</span>
+  </p>
+  <p>
+    4 <img src="./images/Line 8.png" alt=""> <span class="eve"> Introduction to terminal commands</span>
+  </p>
+  <p>
+    5 <img src="./images/Line 8.png" alt=""> <span class="eve"> Git/Github</span>
+  </p>
+  <p>
+    6 <img src="./images/Line 8.png" alt=""> <span class="eve"> CSS3 </span>
+  </p>
+  <p>
+    7 <img src="./images/Line 8.png" alt=""> <span class="eve"> Javascript </span>
+  </p>
+  <p>
+    8 <img src="./images/Line 8.png" alt=""> <span class="eve"> React </span>
+  </p>
+</article>
+</main>
+  <main class="day2">
+  <article>
+    <button id="btn1b" onclick="day1()">Web 2</button>
+    <button id="btn2b" onclick="day2()">Web 3</button>
+  </article>
+  <article class="evelis">
+  <p>
+    1 <img src="./images/Line 8.png" alt=""> <span class="eve"> Introduction to the Blockchain and the EVM </span>
+  </p>
+  <p>
+    2 <img src="./images/Line 8.png" alt=""> <span class="eve">Blockchain Basics: Consensus, wallets, transactions, cryptography</span>
+  </p>
+  <p>
+    3 <img src="./images/Line 8.png" alt=""> <span class="eve"> Introduction to Remix IDE </span>
+  </p>
+  <p>
+    4 <img src="./images/Line 8.png" alt=""> <span class="eve">Solidity Fundamentals: Deploying your first smart contract with Remix</span>
+  </p>
+  <p>
+    5 <img src="./images/Line 8.png" alt=""> <span class="eve"> Local development with Hardhat: Installation, setup, and tour </span>
+  </p>
+  <p>
+    6 <img src="./images/Line 8.png" alt=""> <span class="eve"> Writing and deploying smart contracts with hardhat </span>
+  </p>
+  <p>
+    7 <img src="./images/Line 8.png" alt=""> <span class="eve"> NFTS, IPFS: Deploy your own NFT to Ethereum </span>
+  </p>
+  <p>
+    8 <img src="./images/Line 8.png" alt=""> <span class="eve"> Chainlink oracle: Build a lottery smart contract </span>
+  </p>
+  <p>
+    9 <img src="./images/Line 8.png" alt=""> <span class="eve"> Building front-end clients with ethers.js </span>
+  </p>
+  <p>
+    10 <img src="./images/Line 8.png" alt=""> <span class="eve"> Writing tests for your contracts</span>
+  </p>
+  <p>
+    11 <img src="./images/Line 8.png" alt=""> <span class="eve">Introduction to upgradeable contracts </span>
+  </p>
+  <p>
+    12 <img src="./images/Line 8.png" alt=""> <span class="eve">Security </span>
+  </p>
+</article>
+</main>
+</section>
+
+
+<footer id="foot">
+  <h1>
+    Sponsor Contact details
+  </h1>
+  <div>
+    <a href="mailto:admin@blockchaunn.org">Send a mail: admin@blockchainunn.org</a>
+    <span id="numbers"><img src="./images/icons8-call-male-80.png" id="call" alt="">07064271385, 08050827048, 08124720809</span>
+    <span>
+      <a href="https://www.linkedin.com/in/BlockchainUNN"><img src="./images/linked3.png" alt="" id="ln"> </a>
+      <a href="https://www.twitter.com/BlockchainUNN"><img src="./images/twitter.png" alt="" id="footertw"> </a>
+      <a href="https://www.twitter.com/BlockchainUNN"><img src="./images/youtube.png" alt=""> </a>
+      <a href="https://www.facebook.com/BlockchainUNN"><img src="./images/facebook.png" alt="" id="footerfb"> </a>
+      <a href="https://www.instagram.com/BlockchainUNN"><img src="./images/instagram.png" alt="" id="footerig"> </a>
+    </span>
+  </div>
+  <hr>
+  <p>Copyright © 2023. BlockchainUNN. All rights reserved</p>
+</footer>
+
+
+  </body>
+
+   
+  <script src="./js/event.js"></script>
+  <script src="./js/devbootcamp.js"></script>
+</html>

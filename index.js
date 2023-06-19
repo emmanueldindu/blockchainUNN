@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer')
 const mongoose = require("mongoose")
 const urlencodedParser = bodyParser.urlencoded({extended:false})
 const app = express()
-const port = 5000
+const port = 3000
 const connectDB = require('./db')
 const userRoutes = require('./routes/routes')
 const session = require('express-session')
@@ -155,6 +155,14 @@ app.get('/index', (req, res) => {
 
 app.get('/event', (req, res) => {
     res.render('event')
+})
+
+app.get('/devbootcamp', (req, res) => {
+  res.render('devbootcamp')
+})
+
+app.get('/contentbootcamp', (req, res) => {
+  res.render('contentbootcamp')
 })
 
 app.get('/team', (req, res) => {
