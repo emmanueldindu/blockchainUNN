@@ -135,7 +135,7 @@ const addUser = async (req, res, next) => {
         <div style="font-size: 16px; line-height: 1.5; color: black;">
           <h1 style="font-size: 25px">Hello ${name}</h1>
           <p style="margin-top: 20px;">We are happy to receive your registration for the <strong>BlockchainUNN Conference 2.0</strong>, holding from <strong>June 23rd to June 24th</strong>. We can't wait to see you there!</p>
-          <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/Eov8UP1ZBjVCKmqcN0eu6s">here</a> if you haven't.</p>
+          <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/JUugJbtG8f31AyoUnH7EEs">here</a> if you haven't.</p>
           <p style="margin-top: 20px;">Ensure to pay close attention to your email, as well as the <a href="https://t.me/BlockchainUNN">telegram community</a>, in order not to miss important updates regarding the event.</p>
           <p style="margin-top: 20px;">
             Telegram: <a href="https://t.me/BlockchainUNN">https://t.me/BlockchainUNN</a><br>
