@@ -63,14 +63,33 @@
               <option value="No">No</option>
             </select>
           </div>
-          <!-- 4th -->
+           <!-- 4th -->
+           <div class="dropdown" >
+            <select name="student" required id="">
+              <option value=".">Institution of study</option>
+              <option value="Yes">UNN/Nsukka</option>
+              <option value="No">UNN/UNEC</option>
+              <option value="No">Others</option>
+              <option value="No">I am not a student</option>
+            </select>
+          </div>
+          <!-- 5th -->
+          <div class="dropdown" >
+            <select name="student" required id="">
+              <option value=".">Rate your knowledge of Blockchain Technology</option>
+              <option value="Yes">0 - First encounter was at the conference</option>
+              <option value="No">10-30 - Know a thing or two about it</option>
+              <option value="No">40-70 - Pretty knowledgeable about it</option>
+              <option value="No">80-100 - I'm very knowledgeable about it</option>
+            </select>
+          </div>
+          <!-- 6th -->
           <div class="dropdown">
             <select name="attend" id=""  required>
               <option value=".">How many hours in a week can you commit to this bootcamp? </option>
               <option value="Yes">10 hours</option>
               <option value="No">15 hours</option>
               <option value="No">20 hours</option>
-              <option value="No">30 hours</option>
             </select>
           </div>
           <input type="submit" value="Register Now" id="reg" name="register" onmouseover="regClicked()" onclick="regClicked()" onmouseleave="regUnclicked()" onsubmit="redirect()">
