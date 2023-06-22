@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event</title>
-    <link rel="stylesheet" href="./css/event.css"?version= 1.0.5 />
+    <link rel="stylesheet" href="./css/contentbootcamp.css"?version= 1.0.5 />
     <link rel="shortcut icon" href="/favicon.ico.png" type="image/x-icon" />
   </head>
   <body>
@@ -27,53 +27,12 @@
     <section class="one" id="home">
       <article class="top_left">
         <h2>Blockchain UNN Content writing Bootcamp</h2>
-        <h1>Raising pen magicians</h1>
-      </article>
-      <article class="top_right">
-        <main class="countdown">
-          <div>
-            <h1 id="days">00</h1>
-            <small>Days</small>
-          </div>
-          <div>
-            <h1 id="hours">00</h1>
-            <small>Hours </small>
-          </div>
-          <div>
-            <h1 id="minutes">00</h1>
-            <small>Mins</small>
-          </div>
-          <div>
-            <h1 id="seconds">00</h1>
-            <small>Seconds</small>
-          </div>
-        </main>
-        <main id="register">
-          <h1>REGISTER NOW</h1>
-        </main>
+        <h1>Get better at the art of writing..</h1>
       </article>
     </section>
     <section class="two">
       <article class="eventdetails">
-        <main >
-          <div class="eventinfo">
-            <h1>Bootcamp Details</h1>
-            <div class="eveinfo">
-              <p><img src="./images/date.png" alt="" /> Kickoff: 11th of July 2023</p>
-              <p id="time"><img src="./images/time.png" alt="" /> 9:00 - 10:00pm</p>
-            </div>
-            <div class="eveinfo">
-              <p>
-                <img src="./images/venue.png" alt="" />Zoom, Twitter Space
-              </p>
-            </div>
-            <div class="eveinfo" id="phreg">
-              <a href="#formfield"><input type="submit" value="Register now" id="reg1"></a>
-            </div>
-          </div>
-        </main>
         <main class="wte">
-          <h1>Bootcamp Overview</h1>
           <p id="wtep">
             BlockchainUNN will organize a 6-week content writing bootcamp for those present in our community, kicking off <b>July 11th, 2023</b>.
             <br><br>
@@ -104,14 +63,33 @@
               <option value="No">No</option>
             </select>
           </div>
-          <!-- 4th -->
+           <!-- 4th -->
+           <div class="dropdown" >
+            <select name="student" required id="">
+              <option value=".">Institution of study</option>
+              <option value="Yes">UNN/Nsukka</option>
+              <option value="No">UNN/UNEC</option>
+              <option value="No">Others</option>
+              <option value="No">I am not a student</option>
+            </select>
+          </div>
+          <!-- 5th -->
+          <div class="dropdown" >
+            <select name="student" required id="">
+              <option value=".">Rate your knowledge of Blockchain Technology</option>
+              <option value="Yes">0 - First encounter was at the conference</option>
+              <option value="No">10-30 - Know a thing or two about it</option>
+              <option value="No">40-70 - Pretty knowledgeable about it</option>
+              <option value="No">80-100 - I'm very knowledgeable about it</option>
+            </select>
+          </div>
+          <!-- 6th -->
           <div class="dropdown">
             <select name="attend" id=""  required>
               <option value=".">How many hours in a week can you commit to this bootcamp? </option>
               <option value="Yes">10 hours</option>
               <option value="No">15 hours</option>
               <option value="No">20 hours</option>
-              <option value="No">30 hours</option>
             </select>
           </div>
           <input type="submit" value="Register Now" id="reg" name="register" onmouseover="regClicked()" onclick="regClicked()" onmouseleave="regUnclicked()" onsubmit="redirect()">
@@ -177,5 +155,4 @@
 
    
   <script src="./js/event.js"></script>
-  <script src="./js/devbootcamp.js"></script>
 </html>
