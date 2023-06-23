@@ -38,16 +38,16 @@ const UserSchema = new mongoose.Schema({
 
 function validateUser(data) {
   const schema = Joi.object({
-  fullname: Joi.string().required(),
-  email: Joi.string().email().required(),
-  phone: Joi.string().required(),
-  gender: Joi.string().valid('Male', 'Female').required(),
-  career: Joi.string().required(),
-  student: Joi.string().valid('Yes', 'No').required(),
-  residence: Joi.string().valid('UNN/Nsukka', 'UNEC/Enugu', 'Others').required(),
-  attend: Joi.string().valid('Yes', 'No').required()
+    fullname: Joi.string().required(),
+    email: Joi.string().email().required(),
+    phone: Joi.string().required(),
+    gender: Joi.string().valid('Male', 'Female'),
+    career: Joi.string(),
+    student: Joi.string().valid('Yes', 'No'),
+    residence: Joi.string().valid('UNN/Nsukka', 'UNEC/Enugu', 'Others'),
+    attend: Joi.string().valid('Yes', 'No')
   });
-
+  
   return schema.validate(data);
 }
 

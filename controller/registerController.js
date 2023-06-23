@@ -4,8 +4,8 @@ const Cont = require('../models/cont')
 const Joi = require('joi');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer')
-
-
+const path = require('path');
+const fs = require('fs');
 
 
 // const sendEmail = async (email, subject, message) => {
@@ -44,6 +44,11 @@ const nodemailer = require('nodemailer')
 
 // }
 
+const imagePath = path.join(__dirname, '..', 'view', 'images', 'logoo.PNG');
+const image = fs.readFileSync(imagePath);
+const imageBase64 = image.toString('base64');
+const imageSrc = `data:image/png;base64,${imageBase64}`;
+
 
 
 
@@ -53,7 +58,7 @@ const getAllUsers = async (req, res, next) => {
 }
 
 const getAlluserView = (req, res, next) => {
-    res.render('addUser')
+    res.render('registered')
 }
 
 const addUser = async (req, res, next) => {
@@ -183,15 +188,16 @@ const addUser = async (req, res, next) => {
   
   function validateUser(data) {
     const schema = Joi.object({
-      fullname: Joi.string().required(),
-      email: Joi.string().email().required(),
-      phone: Joi.string().required(),
-      gender: Joi.string().valid('Male', 'Female').required(),
-      career: Joi.string().required(),
-      student: Joi.string().valid('Yes', 'No').required(),
-      residence: Joi.string().valid('UNN/Nsukka', 'UNEC/Enugu', 'Others').required(),
-      attend: Joi.string().valid('Yes', 'No').required()
- 
+      
+        fullname: Joi.string().required(),
+        email: Joi.string().email().required(),
+        phone: Joi.string().required(),
+        gender: Joi.string().valid('Male', 'Female'),
+        career: Joi.string(),
+        student: Joi.string().valid('Yes', 'No'),
+        residence: Joi.string().valid('UNN/Nsukka', 'UNEC/Enugu', 'Others'),
+        attend: Joi.string().valid('Yes', 'No')
+      
     });
   
     return schema.validate(data);
