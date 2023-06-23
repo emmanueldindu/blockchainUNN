@@ -46,7 +46,7 @@
         </main>
       </article>
       <article class="form" id="formfield">
-        <form action="/registered" method="post">
+        <form action="/addDev" method="post">
           <input type="text" name="fullname" id="" placeholder="Fullname" required>
           <input type="email" name="email" id="" placeholder="Email address" required>
           <input type="text" name="phone" id="" placeholder="Phone number" required>
@@ -60,10 +60,10 @@
           </div>
           <!-- 2nd -->
           <div class="dropdown">
-            <select name="career" id="" required>
+            <select name="interest" id="" required>
               <option value=".">Stream interested in</option>
-              <option value="Coding/Development">Web 2</option>
-              <option value="Content Writing">Web 3</option>
+              <option value="Web 2">Web 2</option>
+              <option value="Web 3">Web 3</option>
             </select>
           </div>
           <!-- 3rd -->
@@ -76,17 +76,17 @@
           </div>
            <!-- 4th -->
            <div class="dropdown" >
-            <select name="student" required id="">
+            <select name="institution" required id="">
               <option value=".">Institution of study</option>
-              <option value="Yes">UNN/Nsukka</option>
-              <option value="No">UNN/UNEC</option>
-              <option value="No">Others</option>
-              <option value="No">I am not a student</option>
+              <option value="UNN/NSUKKA">UNN/Nsukka</option>
+              <option value="UNN/UNEC">UNN/UNEC</option>
+              <option value="Others">Others</option>
+              <option value="I am not a student">I am not a student</option>
             </select>
           </div>
           <!-- 5th -->
           <div class="dropdown" >
-            <select name="student" required id="">
+            <select name="knowledge" required id="">
               <option value=".">Prior software development Knowledge?</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -94,22 +94,22 @@
           </div>
           <!-- 6th -->
           <div class="dropdown" >
-            <select name="student" required id="">
+            <select name="rate" required id="">
               <option value=".">Rate your knowledge of Blockchain Technology</option>
-              <option value="Yes">0 - First encounter was at the conference</option>
-              <option value="No">10-30 - Know a thing or two about it</option>
-              <option value="No">40-70 - Pretty knowledgeable about it</option>
-              <option value="No">80-100 - I'm very knowledgeable about it</option>
+              <option value="0 - First encounter was at the conference">0 - First encounter was at the conference</option>
+              <option value="10-30 - Know a thing or two about it">10-30 - Know a thing or two about it</option>
+              <option value="40-70 - Pretty knowledgeable about it">40-70 - Pretty knowledgeable about it</option>
+              <option value="80-100 - Im very knowledgeable about it">80-100 - Im very knowledgeable about it</option>
             </select>
           </div>
           <!-- 7th -->
           <div class="dropdown">
-            <select name="attend" id=""  required>
+            <select name="hours" id=""  required>
               <option value=".">How many hours in a week can you commit to this bootcamp? </option>
-              <option value="Yes">10 hours</option>
-              <option value="No">15 hours</option>
-              <option value="No">20 hours</option>
-              <option value="No">30 hours</option>
+              <option value="10 hours">10 hours</option>
+              <option value="15 hours">15 hours</option>
+              <option value="20 hours">20 hours</option>
+              <option value="30 hours">30 hours</option>
             </select>
           </div>
           <input type="submit" value="Register Now" id="reg" name="register" onmouseover="regClicked()" onclick="regClicked()" onmouseleave="regUnclicked()" onsubmit="redirect()">
