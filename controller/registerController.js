@@ -296,14 +296,13 @@ const addDev = async (req, res, next) => {
         
         <div style="font-size: 16px; line-height: 1.5; color: black;">
           <h1 style="font-size: 25px">Hello ${name}</h1>
-          <p style="margin-top: 20px;">We are happy to receive your registration for the <strong>BlockchainUNN Conference 2.0</strong>, holding from <strong>June 23rd to June 24th</strong>. We can't wait to see you there!</p>
-          <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/JUugJbtG8f31AyoUnH7EEs">here</a> if you haven't.</p>
-          <p style="margin-top: 20px;">Ensure to pay close attention to your email, as well as the <a href="https://t.me/BlockchainUNN">telegram community</a>, in order not to miss important updates regarding the event.</p>
-          <p style="margin-top: 20px;">
-            Telegram: <a href="https://t.me/BlockchainUNN">https://t.me/BlockchainUNN</a><br>
-            Twitter: <a href="https://twitter.com/BlockchainUNN">https://twitter.com/BlockchainUNN</a><br>
-            Instagram: <a href="https://instagram.com/blockchainunn">https://instagram.com/blockchainunn</a>
-          </p>
+          <p style="margin-top: 20px;"> Congratulations on successfully registering for the  <strong>BlockchainUNN Dev Bootcamp</strong></p>
+          <p styles="margin-top: 20px;">Join our <a href="https://chat.whatsapp.com/FdZgaB32LwG9ycUPs2sAet
+          ">whatsapp</a> group for updates, resources, and networking.   </p>
+
+
+          
+
           <p style="margin-top: 20px;">With Love,</p>
           <p style="margin-top: 10px;">Team, BlockchainUNN.</p>
         </div>
@@ -335,7 +334,7 @@ const addDev = async (req, res, next) => {
     const savedDev = await newDev.save();
       
 
-    return res.render('success');
+    return res.render('devsucess');
   } catch (error) {
     console.error('Error:', error);
     return res.status(500).json({ error: 'Internal server error' });
@@ -367,7 +366,7 @@ const addDev = async (req, res, next) => {
 
 
 const getAllCont = async (req, res, next) => {
-  const list = await Dev.find().exec()
+  const list = await Cont.find().exec()
   
 }
   
@@ -450,18 +449,16 @@ const addCont = async (req, res, next) => {
         </div>
         
         <div style="font-size: 16px; line-height: 1.5; color: black;">
-          <h1 style="font-size: 25px">Hello ${name}</h1>
-          <p style="margin-top: 20px;">We are happy to receive your registration for the <strong>BlockchainUNN Conference 2.0</strong>, holding from <strong>June 23rd to June 24th</strong>. We can't wait to see you there!</p>
-          <p style="margin-top: 20px;">We have created a WhatsApp group for event attendees. Join in <a href="https://chat.whatsapp.com/JUugJbtG8f31AyoUnH7EEs">here</a> if you haven't.</p>
-          <p style="margin-top: 20px;">Ensure to pay close attention to your email, as well as the <a href="https://t.me/BlockchainUNN">telegram community</a>, in order not to miss important updates regarding the event.</p>
-          <p style="margin-top: 20px;">
-            Telegram: <a href="https://t.me/BlockchainUNN">https://t.me/BlockchainUNN</a><br>
-            Twitter: <a href="https://twitter.com/BlockchainUNN">https://twitter.com/BlockchainUNN</a><br>
-            Instagram: <a href="https://instagram.com/blockchainunn">https://instagram.com/blockchainunn</a>
-          </p>
-          <p style="margin-top: 20px;">With Love,</p>
-          <p style="margin-top: 10px;">Team, BlockchainUNN.</p>
-        </div>
+        <h1 style="font-size: 25px">Hello ${name}</h1>
+        <p style="margin-top: 20px;"> Congratulations on successfully registering for the  <strong>BlockchainUNN Content Writing Bootcamp</strong></p>
+        <p styles="margin-top: 20px;">Join our <a href="https://chat.whatsapp.com/C5mja01szD7GZ76CxQPlWy ">whatsapp</a> group for updates, resources, and networking.   </p>
+
+
+        
+
+        <p style="margin-top: 20px;">With Love,</p>
+        <p style="margin-top: 10px;">Team, BlockchainUNN.</p>
+      </div>
         <hr style="margin-top: 40px; border: none; border-top: 1px solid #ccc;">
         <p style="text-align: center; font-size: 12px; color: #777;">You received this email because we received a request for your registration for the event. If you didn't request registration, you can safely delete this email.</p>
         
@@ -490,7 +487,7 @@ const addCont = async (req, res, next) => {
     const savedCont = await newCont.save();
       
 
-    return res.render('success');
+    return res.render('contsuccess');
   } catch (error) {
     console.error('Error:', error);
     return res.status(500).json({ error: 'Internal server error' });
