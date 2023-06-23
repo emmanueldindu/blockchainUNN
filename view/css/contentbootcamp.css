@@ -27,7 +27,7 @@ body{
 }
 
 /* padding inline */
-.one,.two, .speakers, .instructors,.outline,.sponsors,footer{
+.one,.two, .speakers, .instructors,.outline,.curr,footer{
     padding-inline: 4rem;
 }
 
@@ -259,6 +259,12 @@ nav li a:hover{
     line-height: 20px;
     letter-spacing: 0.02em;
 }
+.two .head{
+    font-family: Monument Extended;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38px;
+}
 
 /* form update */
 .dropdown{
@@ -292,108 +298,7 @@ nav li a:hover{
 }
 
 /*  */
-.speakers, .instructors{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.speakers h1,.instructors h1{
-    font-family: Monument Extended;
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 38px;
-    color: #212121;
-    margin-top: 8rem;
-}
-.threeG{
-    display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-.three{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    width: 50%;
-    box-shadow: 10px 0px 10px 4px #e5e5e5;
-    clip-path: inset(-5px 0px -5px -5px);
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-.photo{
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    min-width: 400px;
-    height: 270px;
-    object-fit: cover;
-    object-position: 0 0;
-}
-/* speakers */
-#ayodei{
-    width: 260px;
-    object-position: 0 10%;
-}
-#clement{
-    width: 260px;
-    object-position: 0 10%;
-}
-#aronu{
-    object-position: 0 40%;
-}
-#chris{
-    object-position: 0% 20%;
-}
-#ajulu{
-    object-position: 0 0%;
-}
-#sam{
-    object-position: 0 0;
-}
 
-/* instructors */
-#david,#judi{
-    width: 270px;
-}
-#chidie{
-    object-position: 0 10%;
-}
-#david{
-    object-position: center;
-}
-#mba{
-    object-position: 0 0;
-}
-#astonish{
-    object-position: 0 25%;
-}
-#john{
-    object-position: 0 20%;
-}
-/*  */
-#kt{
-    width: 376px;
-    height: 420px;
-    object-fit: cover;
-    object-position: 0rem .1rem;
-    filter: grayscale(80%);
-}
-.three .text{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-weight: 800;
-}
-.three a{
-    text-decoration: none;
-    color: #fff;
-}
-.socials{
-    display: flex;
-    gap: 1rem;
-}
-.socials img{
-    width: 24px;
-}
 h2{
     font-family: Montserrat bold;
     font-size: 20px;
@@ -487,67 +392,62 @@ p{
     color: #388E3C;
 }
 
-/*  */
-.sponsors{
+/* curriculum */
+.curr{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    background-color: #EDF8EB;
-    padding-top: 64px;
-    padding-bottom: 64px;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
 }
-.sponsor1{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-.sponsor1 main{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-.sponsor1 main span{
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-.sponsors h1{
+.curr header{
+    margin-bottom: 2rem;
     font-family: Monument Extended;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
     line-height: 38px;
-    color: #212121;
     color: #388E3C;
 }
-#a1{
-    width: 170px;
+.curr main{
+    border: .5px thin gray;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 32px;
+    padding-top: 32px;
+    box-shadow: 0px 0px 64px #ccd1cb;
+    border-radius: 15px;
+    width: 60%;
+    background-color: #F5FFF3;
 }
-.sponsors h2{
+.curr main h1{
+    margin-bottom: 1rem;
     font-family: Monument Extended;
-    font-size: 22px;
-    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 800;
     line-height: 38px;
-    color: #212121;
-    /* color: #388E3C; */
+    text-align: center;
 }
-
-/* media patners */
-.mediapatners,.ecosystem{
+.curr ul{
+    list-style: none;
+}
+.curr ul li{
+    margin-block: 1rem;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 35px;
+    padding: .5rem 1rem;
     display: flex;
     align-items: center;
 }
-.mediapatners span, .ecosystem span{
-    display: flex;
-    align-items: center;
+.curr ul li:hover{
+    color: #388E3C;
 }
-.mediapatners img{
-    width: 200px;
+.curr ul li img{
+    margin-right: 1rem;
 }
-.ecos{
-    width: 100px;
-}
-
+/* curr ends  */
 /* new foooter */
 footer{
     color: white;
@@ -659,12 +559,15 @@ footer p{
         margin: 1rem 0;
     }
     /* padding inline */
-    .one,.two, .speakers, .instructors,.outline,.sponsors{
+    .one,.two, .speakers, .instructors,.curr,.sponsors{
         /* padding-inline: 1.5rem; */
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
-
+    .two .head{
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
 /* padding inline */
     .one{
         padding-top: 11rem;
@@ -914,6 +817,28 @@ footer p{
     }
     .eve{
         width: 90vw;
+    }
+    .curr article{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .curr header{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    .curr .web2{
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+    .curr main{
+        padding: 16px;
+        width: 100%;
+    }
+    .curr ul li{
+        font-size: 14px;
+        line-height: 24px;
     }
 
     .sponsors{
