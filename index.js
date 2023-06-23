@@ -176,6 +176,16 @@ app.get('/success', (req, res) => {
   res.render('success')
 })
 
+app.get('/contsuccess', (req, res) => {
+  res.render('contsuccess')
+})
+
+
+app.get('/devsuccess', (req, res) => {
+  res.render('devsucess')
+})
+
+
 
 
 //get all user or data
