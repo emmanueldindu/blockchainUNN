@@ -16,9 +16,28 @@ const User = require('./models/user')
 const passport = require('passport')
 const cors = require('cors')
 
+
+
 // middleware
 
+
+
+//testing new commit
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.setHeader('Expires', '0');
+  res.setHeader('Pragma', 'no-cache');
+  next();
+});
+
 app.use(cors())
+
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  res.setHeader('Expires', '0');
+  res.setHeader('Pragma', 'no-cache');
+  next();
+});
 
 app.use(express.static('view'))
 app.use('/view/css', express.static(__dirname + 'view/css'))
@@ -138,6 +157,14 @@ app.get('/event', (req, res) => {
     res.render('event')
 })
 
+app.get('/devbootcamp', (req, res) => {
+  res.render('devbootcamp')
+})
+
+app.get('/contentbootcamp', (req, res) => {
+  res.render('contentbootcamp')
+})
+
 app.get('/team', (req, res) => {
   res.render('team')
 })
@@ -148,6 +175,8 @@ app.get('/about', (req, res) => {
 app.get('/success', (req, res) => {
   res.render('success')
 })
+
+
 
 //get all user or data
 app.get('/api/data', async (req, res) => {
@@ -207,7 +236,7 @@ app.delete('api/users/:id', async (req, res) => {
 
 
 
-
+//comit
 
 
 

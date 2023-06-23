@@ -13,18 +13,18 @@
       <img src="./images/icons8-menu-rounded-50.png" alt="" id="menu" onclick="menuOpen()">
       <img src="./images/icon-close.svg" alt="" id="close" onclick="menuClose()">
       <main>
-      <a href="./"><img src="./images/navLogo.png" alt="" id="navlogo"></a>
+      <a href="#home"><img src="./images/navLogo.png" alt="" id="navlogo"></a>
   </main>
       <ul id="navList">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About Us</a></li>
-          <li><a href="index.html#comm">Community</a></li>
-          <!-- <li><a href="/event">Events</a></li> -->
+          <li><a href="/#communities">Community</a></li>
+          <li><a href="/event">Events</a></li>
           <li><a href="/team">Team</a></li>
           <li><a href="#foot">Contact</a></li>
       </ul>
   </nav>
-    <section class="one">
+    <section class="one" id="home">
       <article class="top_left">
         <h2>Blockchain UNN Conference 2.0</h2>
         <h1>Blockchain and Beyond: The future of Technology.</h1>
@@ -87,7 +87,7 @@
             A 2 days event holding on 23rd & 24th of June, 2023.
             Kickstarting on Day 1 with events such as workshops, networking, career fair, panel session, talks e.t.c.and main event on Day 2.
             <br><br>
-            With an expected attendance of 3000+ participants physically and more virtually, this event is focused on helping Developers - both web2 & Web3 inclined, Creatives & Designers, Blockchain enthusiasts and tech individuals realize the endless possibilities and oppounities of the Blockchain and it’s ecosystem. And get involved.
+            With an expected attendance of 3000+ participants physically and more virtually, this event is focused on helping Developers - both web2 & Web3 inclined, Creatives & Designers, Blockchain enthusiasts and tech individuals realize the endless possibilities and opportunities of the Blockchain and it’s ecosystem.
             <br><br>
             Having been actively contributing to the Blockchain and Web3 space in Nigeria and Africa for over 2 years, our core
             beliefs is that interactions and informative sessions are a great contribution to career growth and poised to create an enabling environment. As well as the belief that anyone can come into the ecosystem and scale, once properly informed.
@@ -97,16 +97,17 @@
         </main>
       </article>
       <article class="form" id="formfield">
-        <form action="/addUser" method="post">
+        <form action="/registered" method="post">
           <input type="text" name="fullname" id="" placeholder="Fullname" required>
           <input type="email" name="email" id="" placeholder="Email address" required>
           <input type="text" name="phone" id="" placeholder="Phone number" required>
           <div class="dropdown">
-            <select name="gender" id="">
+            <select name="gender" id="" required>
               <option value=".">Select a Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
+            
           </div>
           <!-- 2nd -->
           <div class="dropdown">
@@ -150,22 +151,22 @@
 
       
     </section>
-
+<!-- speakers -->
     <section class="speakers">
       <header>
         <h1>Meet our speakers</h1>
       </header>
     <article class="threeG">
       <main class="three">
-          <img src="./images/xeus2.jpg" alt="" class="photo">
+          <img src="./images/xeus2.jpg" alt="" class="photo" id="aronu">
           <div class="text">
               <h2>Ugochukwu Aronu </h2>
               <p>Co-founder & CEO, WICRYPT || Xend Finance
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/AronuUgochukwu?t=BYxrLOi1zuAon4NRPlflug&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="https://www.linkedin.com/in/ugochukwu-aronu-4477a59b">.<img src="./images/ln footer.png" alt="">.</a>
+  
               </div>
           </div>
       </main>
@@ -177,9 +178,9 @@
                   Founder & CEO, DABA 
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/iamchrisani?t=d0Jw-poYk8Y5Umbgqf-lSQ&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="https://www.linkedin.com/in/chrisanidaba">.<img src="./images/ln footer.png" alt="">.</a>
+  
               </div>
           </div>
       </main>
@@ -192,38 +193,38 @@
               <p>Founder, Web3bridge
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/iamchrisani?t=d0Jw-poYk8Y5Umbgqf-lSQ&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="https://www.linkedin.com/in/ayodeji-awosika-69924124">.<img src="./images/ln footer.png" alt="">.</a>
+  
               </div>
           </div>
       </main>
       <main class="three">
-          <img src="./images/samuel.jpg" alt="" class="photo">
+          <img src="./images/nnkay.jpg" alt="" class="photo" id="sam" >
           <div class="text">
-              <h2>Samuel Xeus</h2>
+              <h2>Investor Nnkay</h2>
               <p>
-                  Founder, Nirvana Academy
+                Founder, The Palm Academy
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/InvestorNnKay?t=8H2QbV6ulaR00NYxbJWlJQ&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="">.<img src="./images/ln footer.png" alt="">.</a>
+  
               </div>
           </div>
       </main>
   </article>
     <article class="threeG">
       <main class="three">
-          <img src="./images/clement.jpg" alt="" class="photo" id="ayodei">
+          <img src="./images/clement.jpg" alt="" class="photo" id="clement">
           <div class="text">
               <h2>Clement Hugbo</h2>
               <p>Founder, Web3D Media and <br> DesignersDAO || Head of Design, FairSide, NY, USA.
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/codemathics?t=EIn-kcfEPyasgrPCmquw-Q&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="https://www.linkedin.com/in/codemathics">.<img src="./images/ln footer.png" alt="">.</a>
+  
               </div>
           </div>
       </main>
@@ -235,9 +236,9 @@
                   Founder, Superday
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/ajulu_?t=uVXmUDTzLU2x-xXEvGB0gw&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="https://www.linkedin.com/in/ogochukwu-obiajulu-onyema-53b512133">.<img src="./images/ln footer.png" alt="">.</a>
+  
               </div>
           </div>
       </main>
@@ -250,9 +251,8 @@
               <p>Co-founder, BlockchainHub Africa.
               </p>
               <div class="socials">
-                  <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-                  <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-                  <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+                  <a href="https://twitter.com/theucheedeoga?t=scZZ_1NjCNXQWplVf5WSqw&s=09">.<img src="./images/twitter3.png" alt=""></a>
+                  <a href="https://www.linkedin.com/in/uchennaedeoga">.<img src="./images/ln footer.png" alt="">.</a>
               </div>
           </div>
       </main>
@@ -272,22 +272,20 @@
           <p>Technical Content Writer
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/DaveyHert?t=UG3QWQL3YIoqt-uGPA19kA&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/daveyhert">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
   <main class="three">
-      <img src="./images/joshua2.png" alt="" class="photo">
+      <img src="./images/joshua2.png" alt="" class="photo" id="mba" >
       <div class="text">
           <h2>Joshua Mba</h2>
-          <p>Founder Serzio, Co-founder Stakecut
+          <p>Founder SERLZO, Co-founder Stakecut
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/mbajoshuac?t=FW_Md-oR73oDKv13RHgGfg&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/mbajoshuac">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
@@ -296,69 +294,64 @@
   <main class="three">
       <img src="./images/judi.jpg" alt="" class="photo" id="judi">
       <div class="text">
-          <h2>Joshua Nkwankwo(Judicodes)</h2>
+          <h2>Joshua Nwankwo(Judicodes)</h2>
           <p>Lead, Buildspace Africa
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/judicodes?t=4D2-7ULcXbFqZ-qQL1OxlA&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/joshuanwankwo">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
   <main class="three">
-      <img src="./images/chidie.jpg" alt="" class="photo">
+      <img src="./images/chidie2.jpg" alt="" class="photo" id="chidie">
       <div class="text">
           <h2>Chidiebere Ekennia</h2>
           <p>CTO, BlockchainHub Africa
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/davien21?t=3AUlTyqHV0PJT2ozowpc9w&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/chidiebere-ekennia">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
 </article>
 <article class="threeG">
   <main class="three">
-      <img src="./images/astonish2.jpg" alt="" class="photo">
+      <img src="./images/astonish2.jpg" alt="" class="photo" id="astonish">
       <div class="text">
           <h2>Abraham Owunaka (Astonish)</h2>
           <p>Co-founder MDX, Motion Designer
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/helloastonish?t=MMC3SCWv8JnxbYbg_C5TrA&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/helloastonish">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
   <main class="three">
-      <img src="./images/john.jpg" alt="" class="photo">
+      <img src="./images/john.jpg" alt="" class="photo" id="john">
       <div class="text">
           <h2>John Olamide</h2>
           <p>Web3 Technical Writer 
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/jofawole?t=8il4qtqBgORLGSrX6YiUyg&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/johnfawole">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
 </article>
 <article class="threeG">
   <main class="three">
-      <img src="./images/kevin.png" alt="" class="photo">
+      <img src="./images/richmond.jpg" alt="" class="photo">
       <div class="text">
           <h2>Ohalewe Richmond</h2>
           <p>Product & Brand identity Designer
           </p>
           <div class="socials">
-              <a href="https://twitter.com/kevin_chibuoyim">.<img src="./images/twitter3.png" alt=""></a>
-              <a href="http://linkedin.com/in/kevin-chibuoyim">.<img src="./images/ln footer.png" alt="">.</a>
-              <a href="https://www.facebook.com/kevin.okoye.14">.<img src="./images/facebook3.png" alt=""></a>
+              <a href="https://twitter.com/OhaleweRichmond?t=UasfylH1TwQGI-A5FoH7Kg&s=09">.<img src="./images/twitter3.png" alt=""></a>
+              <a href="https://www.linkedin.com/in/chiemezieohalewe">.<img src="./images/ln footer.png" alt="">.</a>
           </div>
       </div>
   </main>
@@ -378,16 +371,72 @@
   </article>
   <article class="evelis">
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    9:00 am - 9:45 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Attendees arrival, registration and check-in.</span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    9:50 AM - 10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Opening remarks.</span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    10:05 AM - 10:30 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> The Tech Journey; Is it really my thing?. By: <span class="evename"> Joshua Mba</span></span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    10:35 AM - 11:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Starting up a career as a software developer; All you need to
+      know. By: <span class="evename"> Ogbonna Shedrack </span></span>
+  </p>
+  <p>
+    11:05 AM - 11:30 AM<img src="./images/Line 8.png" alt=""> <span class="eve"> Technical Writing as a Career Path; A Personal Experience. By: <span class="evename"> David Hebert </span></span>
+  </p>
+  <p>
+    11:35 AM - 11:37 AM <img src="./images/Line 8.png" alt=""> <span class="eve">Sponsor Brand Video Ad. </span>
+  </p>
+  <p>
+    11:40 AM - 11:55 AM <img src="./images/Line 8.png" alt=""> <span class="eve">Sponsor Brand Platform Presentation</span>
+  </p>
+  <p>
+    12:00 PM - 12:25 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> Navigating from Web2 to Web3; Opportunities for one as a
+      Web2 or Web3 Dev. By: <span class="evename">   Alvan Victor </span></span>
+  </p>
+  <p>
+    12:30 PM - 12:55 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> Introduction to Design. A top down analysis. By: <span class="evename">Ohalewe Richmond </span></span>
+  </p>
+  <p>
+    1:00 PM - 1:10 PM <img src="./images/Line 8.png" alt=""> <span class="eve">REFRESHMENTS. </span>
+  </p>
+  <p>
+    1:15 PM - 1:17 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Sponsor Brand Video Ad. </span>
+  </p>
+  <p>
+    1:20 PM - 1:35 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Sponsor Brand Platform Presentation. </span>
+  </p>
+  <p>
+    1:40 PM - 2:05 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Introduction to the Ethereum Blockchain: Wallets, Transactions, Smart contracts. By: <span class="evename"> Chidiebere Ekennia </span> </span>
+  </p>
+  <p>
+    2:10 PM - 2:20 PM<img src="./images/Line 8.png" alt=""> <span class="eve">Trivia/Giveaway. </span>
+  </p>
+  <p>
+    2:25 PM - 2:55 PM<img src="./images/Line 8.png" alt=""> <span class="eve">PANEL SESSION. </span>
+  </p>
+  <p>
+    3:00 PM - 3:02 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Sponsor Brand Video Ad. </span>
+  </p>
+  <p>
+    3:05 PM - 3:20 PM<img src="./images/Line 8.png" alt=""> <span class="eve">Sponsor Brand Platform Presentation. </span>
+  </p>
+  <h3>
+    BREAKAWAY NOW HAPPENS FOR SPECIFIC WORKSHOPS TO BEGIN
+  </h3>
+  <p>
+    3:20 PM - 4:35 PM<img src="./images/Line 8.png" alt=""> <span class="eve">Developers Workshop. </span>
+  </p>
+  <p>
+    3:20 PM - 4:35 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Content Writers Workshop. </span>
+  </p>
+  <p>
+    3:20 PM - 4:35 PM<img src="./images/Line 8.png" alt=""> <span class="eve">Designers Workshop. </span>
+  </p>
+  <p>
+    4:35 PM - 4:40 PM<img src="./images/Line 8.png" alt=""> <span class="eve">Closing Remark </span>
   </p>
 </article>
 </main>
@@ -398,29 +447,79 @@
   </article>
   <article class="evelis">
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    9:00 AM - 9:45 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Attendees arrival, registration and check-in</span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    9:50 AM - 10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve">Opening remarks</span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    10:05 AM - 10:30 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Co-Founders’ Address; Rundown of BlockchainUNN with slides of achievement over the years. By: <span class="evename"> Kevin, Alvan & Annaelechukwu </span></span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    10:35 AM - 11:00 AM<img src="./images/Line 8.png" alt=""> <span class="eve">Introduction To Blockchain Technology; Why you need to pay attention to it. By: <span class="evename"> Ayodeji Awosika </span></span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    11:05 AM - 11:30 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> The Business of Crypto Trading, as A Career and tool to build
+
+      Generational Wealth; All you need to know. By: <span class="evename"> Investor NnKay </span></span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    11:35 AM - 11:37 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Sponsor Brand Video Ad. </span>
   </p>
   <p>
-    9:00-10:00 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Arrival of all participants, guests and other dignitaries. By: <span class="evename"> Ogbonna Shedrack </span></span>
+    11:40 AM - 11:55 AM <img src="./images/Line 8.png" alt=""> <span class="eve"> Sponsor Brand Platform Presentation.</span>
+  </p>
+  <p>
+    12:00 PM - 12:25 PM<img src="./images/Line 8.png" alt=""> <span class="eve"> Building blockchain products that solves real life problems/issues. By: <span class="evename"> Ugochukwu Aronu </span></span>
+  </p>
+  <p>
+    12:30 PM - 12:55 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> Relevance of Design in scaling Web3 Adoption. By: <span class="evename">Clement Hugbo </span></span>
+  </p>
+  <H3>
+    BlockchainUNN 2 Yrs Anniversary
+  </H3>
+  <p>
+    1:00 PM - 1:25 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> BlockchainUNN Anniversary Video, Photo Ops, Cake Cutting.</span>
+  </p>
+  <p>
+    1:30 PM - 1:45 PM <img src="./images/Line 8.png" alt=""> <span class="eve">REFRESHMENT. </span>
+  </p>
+  <p>
+    1:50 PM - 2:00 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Trivia/Giveaway. </span>
+  </p>
+  <p>
+    2:00 PM - 2:15 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> PANVALA.</span>
+  </p>
+  <p>
+    2:20 PM - 2:45 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> Blockchain Content Writing; Becoming a Perfect writer. By: <span class="evename">Obiajulu Onyema </span></span>
+  </p>
+  <p>
+    2:50 PM - 3:15 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> Entrepreneurship in Blockchain and Wealth Generation. By: <span class="evename">Chris Ani </span></span>
+  </p>
+  <p>
+    3:20 PM - 3:22 PM<img src="./images/Line 8.png" alt=""> <span class="eve"> Sponsor Brand Video Ad. </span>
+  </p>
+  <p>
+    3:25 PM - 3:40 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> Sponsor Brand Platform Presentation.</span>
+  </p>
+  <p>
+    3:45 PM - 4:10 PM <img src="./images/Line 8.png" alt=""> <span class="eve">PANEL SESSION - Topic: Choosing the Perfect Career; Finding Your Ideal Niche in the Industry.</span>
+  </p>
+  <p>
+    4:15 PM - 4:40 PM <img src="./images/Line 8.png" alt=""> <span class="eve"> MAJOR GIVEAWAY SEGMENT.</span>
+  </p>
+  <p>
+    4:45 PM - 4:50 PM <img src="./images/Line 8.png" alt=""> <span class="eve">Closing Remark.</span>
+  </p>
+  <p>
+    4:50 PM - Upwards <img src="./images/Line 8.png" alt=""> <span class="eve"> Booth Visit.</span>
   </p>
 </article>
 </main>
 </section>
+
+
+
 <section class="sponsors">
   <header>
     <h1>
@@ -430,20 +529,20 @@
   <article class="sponsor1">
     <header>
       <h2>
-        Platinum(Headline) Sponsors:
+        Platinum (Headline) Sponsors:
       </h2>
     </header>
     <main>
       <span>
-      <div> <img src="./images/AlphaBlocks-Png-1.png" alt="" id="a1"></div>
-      <div><img src="./images/GIDA.png" alt=""></div>
+      <div> <img src="./images/Panvala Logo - Primary.png" alt="" id="a1"></div>
+      <!-- <div><img src="./images/GIDA.png" alt=""></div> -->
     </span>
     <span>
-      <div><img src="./images/b4u.png" alt=""></div>
+      <!-- <div><img src="./images/b4u.png" alt=""></div> -->
     </span>
     </main>
   </article>
-  <article class="sponsor1">
+  <!-- <article class="sponsor1">
     <header>
       <h2>
         Gold Sponsors:
@@ -458,7 +557,7 @@
         <div><img src="./images/b4u.png" alt=""></div>
       </span>
     </main>
-  </article>
+  </article> -->
   <article class="sponsor1">
     <header>
       <h2>
@@ -467,12 +566,12 @@
     </header>
     <main>
       <span>
-        <div> <img src="./images/AlphaBlocks-Png-1.png" alt="" id="a1"></div>
-        <div><img src="./images/GIDA.png" alt=""></div>
+        <div> <img src="./images/the graph.jpg" alt="" id="a1"></div>
+        <!-- <div><img src="./images/GIDA.png" alt=""></div> -->
       </span>
-      <span>
+      <!-- <span>
         <div><img src="./images/b4u.png" alt=""></div>
-      </span>
+      </span> -->
     </main>
   </article>
   <article class="sponsor1">
@@ -483,11 +582,28 @@
     </header>
     <main>
       <span>
-        <div> <img src="./images/AlphaBlocks-Png-1.png" alt="" id="a1"></div>
-        <div><img src="./images/GIDA.png" alt=""></div>
+        <div> <img src="./images/bunzz.jpg" alt="" id="a1"></div>
+        <div> <img src="./images/remix.jpg" alt="" id="a11"></div>
+      </span>
+    </main>
+  </article>
+  <article class="sponsor1">
+    <header>
+      <h2>
+        Ecosystem Patners:
+      </h2>
+    </header>
+    <main class="ecosystem">
+      <span>
+        <div> <img src="./images/googledev.jpg" alt="" id="a1"></div>
+        <div><img src="./images/nacos.png" alt="" class="ecos"></div>
       </span>
       <span>
-        <div><img src="./images/b4u.png" alt=""></div>
+        <div><img src="./images/sca.jpg" alt="" class="ecos"></div>
+        <div><img src="./images/University of Nigeria _ Enugu Campus, Nsukka Campus - Blue.jpg" alt="" class="ecos"></div>
+      </span>
+      <span>
+        <div><img src="./images/techniverse.png" alt="" class="ecos"></div>
       </span>
     </main>
   </article>
@@ -497,13 +613,17 @@
         Media Patners:
       </h2>
     </header>
-    <main>
+    <main class="mediapatners">
       <span>
-        <div> <img src="./images/AlphaBlocks-Png-1.png" alt="" id="a1"></div>
-        <div><img src="./images/GIDA.png" alt=""></div>
+        <div> <img src="./images/bankless.jpg" alt="" id="a1"></div>
+        <div><img src="./images/technext.jpg" alt=""></div>
       </span>
       <span>
-        <div><img src="./images/b4u.png" alt=""></div>
+        <div><img src="./images/nftstudio.jpg" alt=""></div>
+        <div><img src="./images/diuto.png" alt=""></div>
+      </span>
+      <span>
+        <div><img src="./images/crypto asset.jpg" alt="" id="casset" ></div>
       </span>
     </main>
   </article>
@@ -514,14 +634,14 @@
     Sponsor Contact details
   </h1>
   <div>
-    <a href="mailto:admin@blockchaunn.org">Send a mail: admin@blockchaunn.org</a>
+    <a href="mailto:admin@blockchaunn.org">Send a mail: admin@blockchainunn.org</a>
     <span id="numbers"><img src="./images/icons8-call-male-80.png" id="call" alt="">07064271385, 08050827048, 08124720809</span>
     <span>
-      <a href="http://www.linkedin.com/in/BlockchainUNN"><img src="./images/linked3.png" alt="" id="ln"> </a>
-      <a href="http://www.twitter.com/BlockchainUNN"><img src="./images/twitter.png" alt="" id="footertw"> </a>
-      <a href="http://www.twitter.com/BlockchainUNN"><img src="./images/youtube.png" alt=""> </a>
-      <a href="http://www.facebook.com/"><img src="./images/facebook.png" alt="" id="footerfb"> </a>
-      <a href="http://www.instagram.com/BlockchainUNN"><img src="./images/instagram.png" alt="" id="footerig"> </a>
+      <a href="https://www.linkedin.com/in/BlockchainUNN"><img src="./images/linked3.png" alt="" id="ln"> </a>
+      <a href="https://www.twitter.com/BlockchainUNN"><img src="./images/twitter.png" alt="" id="footertw"> </a>
+      <a href="https://www.twitter.com/BlockchainUNN"><img src="./images/youtube.png" alt=""> </a>
+      <a href="https://www.facebook.com/BlockchainUNN"><img src="./images/facebook.png" alt="" id="footerfb"> </a>
+      <a href="https://www.instagram.com/BlockchainUNN"><img src="./images/instagram.png" alt="" id="footerig"> </a>
     </span>
   </div>
   <hr>

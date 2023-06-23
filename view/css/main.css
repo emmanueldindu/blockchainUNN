@@ -25,8 +25,10 @@ body{
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
-    Padding-inline: 6rem;
+    /* gap: 8rem; */
+    /* Padding-inline: 6rem; */
+    padding-left: 6rem;
+    padding-right: 6rem;
     overflow-x: hidden;
     background-color: #fff;
 }
@@ -62,7 +64,10 @@ nav{
 nav ul{
     list-style: none;
     display: flex;
-    gap: 3rem;
+    /* gap: 3rem; */
+}
+nav ul li{
+    margin: 0 1.5rem;
 }
 nav li a{
     text-decoration: none;
@@ -199,15 +204,16 @@ nav li a:hover{
 }
 .videos{
     display: flex;
-    gap: 2.1rem;
+    /* gap: 2.1rem; */
     justify-content: center;
     padding-inline: 2rem;
-    margin-bottom: -4rem;
+    margin-bottom: -6rem;
 }
 .videos iframe{
     width: 750px;
     transform: translateY(-10rem);
     border-radius: 20px;
+    margin-bottom: 2.1rem;
 }
 .patners{
     display: flex;
@@ -223,8 +229,11 @@ nav li a:hover{
 }
 .patners article span{
     display: flex;
-    gap: 5rem;
+    /* gap: 5rem; */
     align-items: center;
+}
+.patners article span img{
+    margin-right: 5rem;
 }
 .patnersCon{
     display: flex;
@@ -252,13 +261,14 @@ nav li a:hover{
 }
 .why{
     display: flex;
-    gap: 4rem;
+    /* gap: 4rem; */
     align-items: center;
     background-color: #f5f5fd;
     padding: 3rem 0rem;
+    margin-top: -8rem;
     padding-inline: 6rem;
     margin-inline: -6rem;
-    margin-top: -8rem;
+    /* margin-top: -8rem; */
 }
 .why h1{
     font-family: Monument Extended;
@@ -278,6 +288,7 @@ nav li a:hover{
 }
 .why header{
     width: 60%;
+    margin-right: 4rem;
 }
 .why main img{
     animation: preach 2.3s linear infinite;
@@ -361,7 +372,7 @@ nav li a:hover{
 .one article{
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    /* gap: 5rem; */
     align-items: center;
     justify-content: center;
     width: 50%;
@@ -377,7 +388,8 @@ nav li a:hover{
     background-color: #388E3C;
     color: white;
     box-shadow: 0px 0px 36px #388E3C;
-    border: none
+    border: none;
+    margin-bottom: 5rem;
 }
 .mission{
     border: 1px solid #e5e5e5;
@@ -402,8 +414,8 @@ nav li a:hover{
 }
 .two{
     flex-direction: column;
-    gap: 2rem;
-    margin-top: -8rem;
+    /* gap: 2rem; */
+    /* margin-top: -8rem; */
 }
 #comm{
     transform: translateY(-7rem);
@@ -413,6 +425,7 @@ nav li a:hover{
     gap: 1rem;
     align-items: center;
     margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 .two div{
     width: 50%;
@@ -517,13 +530,14 @@ nav li a:hover{
 .skills{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 2rem; */
 }
 .skills h1{
     font-family: Monument Extended;
     font-size: 30px;
     font-weight: 800;
     line-height: 48px;
+    margin-bottom: 2rem;
 }
 .skills article{
     display: flex;
@@ -1068,7 +1082,7 @@ hr{
     gap: 2rem;
     padding: 6rem 4rem;
     margin-inline: -6rem;
-    margin-top: -8rem;
+    /* margin-top: -8rem; */
 }
 .community header{
     width: 100%;
@@ -1101,7 +1115,7 @@ hr{
 
 footer {
     margin-inline: -6rem;
-    margin-top: -8rem;
+    /* margin-top: -8rem; */
     padding: 0rem 4rem;
     background-color: #000000;
 }
@@ -1109,6 +1123,7 @@ footer {
 .logo {
     width: 350px;
     height: 350px;
+    z-index: 1;
 }
 
 .footer-div {
@@ -1120,7 +1135,7 @@ footer {
 
 .footer-container {
     display: flex;
-    
+    z-index: 2;
 }
 .footer-container span{
     display: flex;
@@ -1148,7 +1163,7 @@ footer h3{
     align-items: center;
     gap: 5rem;
     float: right;
-    margin-top: -8rem;
+    /* margin-top: -8rem; */
 }
 .contact{
     color: #fff;
@@ -1201,6 +1216,11 @@ footer hr {
     
 }
 
+section{
+    margin-bottom: 8rem;
+}
+
+
 
 @media only screen and (max-width: 670px){
     html{
@@ -1227,7 +1247,9 @@ footer hr {
     }
     body{
         width: 100%;
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
         overflow-x: hidden;
     }
     nav main{
@@ -1242,12 +1264,18 @@ footer hr {
     }
     nav{
         width: 100%;
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-inline: -1rem;
     }
     nav ul{
         position:absolute;
-        inset: 0 0 0 30%;
+        top: 0;
+        bottom: 0;
+        width: 60%;
+        right: 0;
+        /* inset: 0 0 0 30%; */
         flex-direction: column;
         justify-content: initial;
         background-color: #F5FFF3;
@@ -1257,6 +1285,9 @@ footer hr {
         transition: .5s linear;
         transform: translateX(100%);
         z-index: 43;
+    }
+    nav ul li{
+        margin: 1rem 0;
     }
         #pop_up_con{
         margin-inline: -1rem;
@@ -1272,12 +1303,17 @@ footer hr {
         padding: 15px 15px;
         font-size: 20px;
     }
+    #pop_up_con{
+        display: none;
+    }
     .top main{
         margin-inline: -1rem;
         margin-top: 0rem;
         padding-top: 3rem;
         height: 700px;
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .top main::before{
         content: '';
@@ -1335,7 +1371,6 @@ footer hr {
     .patnership{
         margin-inline: -1rem;
         margin-bottom: -1rem;
-        padding-inline: 1;
         padding-bottom: 0rem;
     }
     .patners header{
@@ -1349,7 +1384,9 @@ footer hr {
     }
     .patners{
         margin-top: -3rem;
-        padding-inline: 2rem;
+        /* padding-inline: 2rem; */
+        padding-left: 2rem;
+        padding-right: 2rem;
         flex-direction: column;
         gap: 2rem;
     }
@@ -1370,7 +1407,7 @@ footer hr {
     }
     #web3{
         width: 220px;
-        margin-right: 0;
+        /* margin-right: 0; */
     }
     #a1{
         transform: translateX(0rem);
@@ -1390,9 +1427,12 @@ footer hr {
     }
     .why{
         flex-direction: column;
-        gap: 3rem;
+        /* gap: 2rem; */
         margin-inline: -1rem;
-        padding-inline: 1.5rem;
+        margin-top: 1rem;
+        /* padding-inline: 1.5rem; */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     .why h1{
         font-size: 20px;
@@ -1401,6 +1441,8 @@ footer hr {
     }
     .why header{
         width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
     }
     .why h3{
         font-size: 16px;
@@ -1438,9 +1480,12 @@ footer hr {
     }
     .one article{
         width: 100%;
-        gap: 2.5rem;
+        /* gap: 2.5rem; */
         justify-content: center;
         position: relative;
+    }
+    .vision{
+        margin-bottom: 2rem;
     }
     .one{
         gap: 3rem;
@@ -1449,7 +1494,9 @@ footer hr {
         flex-direction: column;
         position: relative;
         margin-inline: -1rem;
-        padding-inline: 1.5rem;
+        /* padding-inline: 1.5rem; */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     .one h1{
         font-size: 20px;
@@ -1479,10 +1526,14 @@ footer hr {
     } */
     .two{
         flex-direction: column;
-        margin-inline: -1rem;
-        padding-inline: 1.5rem;
+        /* margin-inline: -1rem; */
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        /* padding-inline: 1.5rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-bottom: -2rem;
-        margin-top: -10rem;
+        margin-top: -4rem;
     }
     .two header h1{
         font-size: 20px;
@@ -1491,6 +1542,7 @@ footer hr {
     }
     .two header{
         margin-left: 1rem;
+        margin-bottom: 1rem;
     }
     #budv h1, #buds h1, #bucs h1, #buw h1{
         font-size: 15px;
@@ -1512,7 +1564,9 @@ footer hr {
     .two article{
         flex-direction: column;
         justify-content: center;
-        Padding-inline: 0rem;
+        /* Padding-inline: 0rem; */
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
     #budv,#budc,#bucs, #buw{
         margin-left: 0rem;
@@ -1530,7 +1584,7 @@ footer hr {
     }
     .two div{
         padding: 3rem 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     #bucs{
         margin-top: -1rem;
@@ -1543,18 +1597,24 @@ footer hr {
         padding: 7px 11px;
     }
     .skills {
-        margin-top: -1rem;
-        gap: .5rem;
+        margin-top: 3rem;
+        /* gap: .5rem; */
     }
     .skills h1{
         font-size: 20px;
+        margin-bottom: 1rem;
+    }
+    .skills article{
+        gap: 0;
+        margin-bottom: 1rem;
     }
     .skills ul{
         flex-direction: column;
-        gap: 1rem;
+        gap: 0rem;
     }
     .skills ul li{
         width: 100%;
+        margin-bottom: 1rem;
     }
     .skills ul li h2{
         font-size: 22px;
@@ -1577,17 +1637,26 @@ footer hr {
     #eventH{
         font-size: 16px;
         line-height: 28px;
-        padding-inline: .5rem;
+        /* padding-inline: .5rem; */
+        padding-left: .5rem;
+        padding-right: .5rem;
     }
     .three{
-        margin-top: -1rem;
+        /* margin-top: -1rem; */
         margin-inline: -1rem;
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-bottom: -3rem;
+        gap: 0;
     }
     .three header{
-        margin-bottom: -1.5rem;
+        /* margin-bottom: -1.5rem; */
         padding-left: .5rem;
+    }
+    .three main{
+        gap: 0;
+
     }
     #date_snippet{
         line-height: 22px;
@@ -1596,7 +1665,8 @@ footer hr {
         font-size: 22px;
     }
     .featured_articles{
-        margin-top: -7rem;
+        margin-top: 0rem;
+        gap: 0;
     }
     .featured_articles header h1{
         font-size: 25px;
@@ -1610,7 +1680,8 @@ footer hr {
     }
     .featured_articles article{
         overflow-x: scroll;
-        gap: 2rem;
+        gap: 0rem;
+        margin-top: 1rem;
     }
     .featured_articles article::-webkit-scrollbar{
         visibility: hidden;
@@ -1619,24 +1690,32 @@ footer hr {
     .featured_articles article main{
         min-width: 90%;
         margin-left: 5%;
+        margin-right: 5%;
     }
     .featured_articles #swipe{
         display: block;
         width: 50px;
         margin-left: auto;
-        margin-block: -2rem;
         margin-right: 1rem;
     }
     .countdown h1{
-        font-size: 23px;
-        line-height: 35px;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: .5rem;
     }
     .countdown h3{
         font-size: 14px;
-        margin-bottom: -1rem;
+        margin-bottom: 1rem;
     }
     .countdown article{
-        gap: 1.5rem;
+        gap: 0rem;
+    }
+    .countdown article div{
+        margin-right: 1.5rem;
+        margin-top: 1rem;
+    }
+    #date_snippet{
+        margin-top: .5rem;
     }
     .att{
         display: none;
@@ -1650,6 +1729,7 @@ footer hr {
     #fulldet{
         font-size: 12px;
         transform: translateY(-3.5rem);
+        margin-bottom: 3rem;
     }
     #evearr{
         padding: 5px;
@@ -1658,6 +1738,10 @@ footer hr {
     }
     .oldevents{
         animation: slide_event 23s linear 1s infinite;
+        gap: 0;
+    }
+    .oldevents img{
+        margin-right: 1rem;
     }
     @keyframes slide_event {
         100%{
@@ -1680,9 +1764,14 @@ footer hr {
         transform: translateY(0rem);
     }
     .testimonials{
-        padding-inline: 1.5rem;
+        /* padding-inline: 1.5rem; */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         margin-inline: -1rem;
-        margin-top: -4rem;
+        margin-top: 0rem;
+    }
+    .testimonials main{
+        gap: 0;
     }
     .testimonials h1{
         font-size: 18px;
@@ -1710,7 +1799,7 @@ footer hr {
         gap: 0;
     }
     .reviewidentity header{
-        margin-left: -1rem;
+        margin-left: 4rem;
         width: 40vw;
     }
     .reviewimg{
@@ -1730,7 +1819,7 @@ footer hr {
         display: flex;
         flex-direction: column-reverse;
         width: 100vw;
-        margin-right: -2rem;
+        margin-right: 3rem;
     }
     .card1 {
         flex-direction: column-reverse;
@@ -1763,9 +1852,11 @@ footer hr {
     }
     .teamsec{
         margin-inline: -1rem;
-        padding-inline: 1.5rem;
+        /* padding-inline: 1.5rem; */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         gap: 0rem;
-        margin-top: 0rem;
+        margin-top: 8rem;
     }
     .team-section{
         padding: 0 1rem;
@@ -1790,31 +1881,34 @@ footer hr {
      }
      .cfs{
         flex-direction: column;
-        gap: 5rem;
-        margin-bottom: 5rem;
+        gap: 0rem;
+        /* margin-bottom: 5rem; */
      }
      .teamsec header h1{
         font-size: 22px;
-        line-height: 25px;
+        line-height: 20px;
      }
      .teaml h2{
-        line-height: 30px;
+        line-height: 22px;
      }
      .teaml{
         flex-direction: column;
         width: 100%;
         clip-path: inset(-5px -5px -5px -5px);
         box-shadow: 0px 5px 15px gainsboro;
-        gap: 1rem;
+        gap: 0rem;
+        margin-bottom: 5rem;
         align-items: flex-start;
         justify-content: center;
         border-bottom-left-radius: 0px;
      }
      .teaml .cfst{
+        gap: 0;
         gap: 18px;
         width: 75%;
         padding-left: 1rem;
         padding-bottom: 1rem;
+        margin-top: 1rem;
      }
      .photo{
         border-radius: 5px;
@@ -1828,7 +1922,11 @@ footer hr {
      }
      .teaml .socials{
         display: flex;
-        gap: .2rem;
+        margin-top: 1rem;
+        gap: 0rem;
+    }
+    .teaml .socials a{
+        margin-right: .5rem;
     }
     .otherst{
         align-items: center;
@@ -1854,17 +1952,22 @@ footer hr {
         padding-left: 1.5rem;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        margin-top: -8rem;
+        margin-bottom: 0rem;
+        margin-top: -3rem;
+        gap: 0;
+        /* margin-top: -8rem; */
     }
     .community header h1{
         font-size: 22px;
+        margin-bottom: 2rem;
     }
     .community-breakdown {
         flex-direction: column;
-        gap: 2rem;
+        gap: 0rem;
      }
      .community-breakdown li {
          width: 100%;
+         margin-bottom: 3rem;
      }
      .community-breakdown h4 {
         font-family: 'Monument Extended', sans-serif;
@@ -1912,7 +2015,7 @@ footer hr {
     }
     .orgs{
         margin-top: 0;
-        gap: 1.5rem;
+        gap: 0rem;
         float: none;
         margin-left: -2rem;
         width: 100vw;
@@ -1921,6 +2024,7 @@ footer hr {
     }
     .orgs img{
         width: 20px;
+        margin-right: 1rem;
     }
     #footerfb{
         width: 20px;
@@ -1936,9 +2040,8 @@ footer hr {
     .contact{
         margin-top: -1rem;
         justify-content: flex-start;
-        width: 90vw;
+        width: 100vw;
         margin-bottom: 1rem;
-        margin-left: -2rem;
         text-align: left;
     }
     .contact h3{
@@ -1948,6 +2051,8 @@ footer hr {
     }
     .contact a{
         font-size: 18px;
+        margin-left: -3rem;
+        /* margin-right: 1rem; */
     }
 }
 
@@ -2347,12 +2452,16 @@ footer hr {
     }
     .patnership{
         margin-inline: -6rem;
-        padding-inline: 6rem;
+        /* padding-inline: 6rem; */
+        padding-left: 6rem;
+        padding-right: 6rem;
     }
     .patners{
         flex-direction: column;
         gap: 4rem;
-        padding-inline: 0rem;
+        /* padding-inline: 0rem; */
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
     .patners article{
         gap: -0rem;
@@ -2365,7 +2474,9 @@ footer hr {
         font-size: 25px;
     }
     .why{
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
         margin-inline: -6rem;
     }
     .why header{
@@ -2387,7 +2498,9 @@ footer hr {
         position: relative;
         padding-top: 8rem;
         padding-bottom: 4rem;
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     .one>div img{
         width:500px;
@@ -2402,14 +2515,18 @@ footer hr {
     }
     .two{
         flex-direction: column;
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
         margin-inline: -6rem;
     }
     .two article{
         flex-direction: row;
     }
     .community{
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     .community header h1{
         font-size: 25px;
@@ -2446,7 +2563,9 @@ footer hr {
     }
     .skills{
         margin-inline: -6rem;
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     #skilh{
         margin-top: 5px;
@@ -2462,7 +2581,9 @@ footer hr {
         padding-top: 10px;
     }
     .testimonials{
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .testimonial-card{
         flex-direction: column;
@@ -2486,7 +2607,9 @@ footer hr {
         }
     }
     .teamsec{
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
         margin-inline: -6rem;
     }
     .teamsec header h1{
@@ -2500,7 +2623,9 @@ footer hr {
         width: 300px;
     }
     .testimonials{
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
         margin-inline: -6rem;
     }
     #next{
@@ -2547,7 +2672,9 @@ footer hr {
     }
     nav{
         width: 100%;
-        padding-inline: 1rem;
+        /* padding-inline: 1rem; */
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-inline: -1rem;
     }
     /* nav img{
@@ -2576,7 +2703,9 @@ footer hr {
         overflow-y: scroll;
     }
     .top,.patnership,.why,.one,.problem,.community,.two,.achieve,.three,.teamsec,.testimonials{
-        padding-inline: 3rem;
+        /* padding-inline: 3rem; */
+        padding-left: 3rem;
+        padding-right: 3rem;
         margin-inline: -1rem;
     }
     .top main{
@@ -2623,7 +2752,7 @@ footer hr {
     .patnership{
         margin-inline: -1rem;
         margin-bottom: -1rem;
-        padding-inline: 1;
+        /* padding-inline: 1; */
         padding-bottom: 0rem;
     }
     .patners header{
@@ -2638,6 +2767,8 @@ footer hr {
     .patners{
         margin-top: -3rem;
         padding-inline: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         flex-direction: column;
         gap: 2rem;
     }
@@ -2750,7 +2881,9 @@ footer hr {
         font-size: 14px;
     }
     .skills{
-        padding-inline: 3rem; 
+        /* padding-inline: 3rem;  */
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     .skills h1{
         font-size: 20px;

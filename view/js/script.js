@@ -266,9 +266,14 @@ let popupClose = document.getElementById('popupClose')
             setInterval(()=>{
                 if(community_members.textContent < 3000){
                     community_members.textContent++
+                    console.log('ttt')
                 }else community_members.textContent == 3000
             },.02)
         }
+
+        const members = document.getElementById('cu')
+
+        members.addEventListener('touchstart', countUp)
 
         
         
