@@ -27,7 +27,7 @@ body{
 }
 
 /* padding inline */
-.one,.two, .speakers, .instructors,.outline,.sponsors,footer{
+.one,.two, .speakers, .instructors,.outline,.sponsors,.curr,footer{
     padding-inline: 4rem;
 }
 
@@ -290,128 +290,71 @@ nav li a:hover{
     padding: 10px;
     background-color: white;
 }
-
-/*  */
-.speakers, .instructors{
+/* curriculum */
+.curr{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
 }
-.speakers h1,.instructors h1{
+.curr header{
+    margin-bottom: 2rem;
     font-family: Monument Extended;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
     line-height: 38px;
-    color: #212121;
-    margin-top: 8rem;
+    color: #388E3C;
 }
-.threeG{
+.curr article{
     display: flex;
-    gap: 3rem;
-    margin-top: 2rem;
+    flex-direction: row-reverse;
 }
-.three{
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    width: 50%;
-    box-shadow: 10px 0px 10px 4px #e5e5e5;
-    clip-path: inset(-5px 0px -5px -5px);
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-.photo{
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    min-width: 400px;
-    height: 270px;
-    object-fit: cover;
-    object-position: 0 0;
-}
-/* speakers */
-#ayodei{
-    width: 260px;
-    object-position: 0 10%;
-}
-#clement{
-    width: 260px;
-    object-position: 0 10%;
-}
-#aronu{
-    object-position: 0 40%;
-}
-#chris{
-    object-position: 0% 20%;
-}
-#ajulu{
-    object-position: 0 0%;
-}
-#sam{
-    object-position: 0 0;
-}
-
-/* instructors */
-#david,#judi{
-    width: 270px;
-}
-#chidie{
-    object-position: 0 10%;
-}
-#david{
-    object-position: center;
-}
-#mba{
-    object-position: 0 0;
-}
-#astonish{
-    object-position: 0 25%;
-}
-#john{
-    object-position: 0 20%;
-}
-/*  */
-#kt{
-    width: 376px;
-    height: 420px;
-    object-fit: cover;
-    object-position: 0rem .1rem;
-    filter: grayscale(80%);
-}
-.three .text{
+.curr main{
+    border: .5px thin gray;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    font-weight: 800;
+    /* align-items: center; */
+    padding: 32px;
+    padding-top: 32px;
+    box-shadow: 0px 0px 64px #ccd1cb;
+    border-radius: 15px;
+    width: 50%;
+    background-color: #F5FFF3;
 }
-.three a{
-    text-decoration: none;
-    color: #fff;
-}
-.socials{
-    display: flex;
-    gap: 1rem;
-}
-.socials img{
-    width: 24px;
-}
-h2{
-    font-family: Montserrat bold;
+.curr main h1{
+    margin-bottom: 1rem;
+    font-family: Monument Extended;
     font-size: 20px;
+    letter-spacing: 2px;
     font-weight: 800;
-    line-height: 24px;
+    line-height: 38px;
+    text-align: center;
 }
-p{
+.curr ul{
+    list-style: none;
+}
+.curr ul li{
+    margin-block: 1rem;
     font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #4a4a4a;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 35px;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
 }
-.instructors{
-    margin-top: 3rem;
+.curr ul li:hover{
+    color: #388E3C;
 }
-
+.curr ul li img{
+    margin-right: 1rem;
+}
+.curr .web2{
+    margin-left: 4rem;
+    position: relative;
+    height: fit-content;
+}
+/* curr ends  */
 .outline{
     display: flex;
     flex-direction: column;
@@ -659,7 +602,7 @@ footer p{
         margin: 1rem 0;
     }
     /* padding inline */
-    .one,.two, .speakers, .instructors,.outline,.sponsors{
+    .one,.two, .speakers, .instructors,.curr,.sponsors{
         /* padding-inline: 1.5rem; */
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -915,6 +858,28 @@ footer p{
     .eve{
         width: 90vw;
     }
+    .curr article{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .curr header{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+    .curr .web2{
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+    .curr main{
+        padding: 16px;
+        width: 100%;
+    }
+    .curr ul li{
+        font-size: 14px;
+        line-height: 24px;
+    }
 
     .sponsors{
         margin-inline: -1rem;
@@ -922,7 +887,7 @@ footer p{
         gap: 0rem;
     }
     .sponsors h1{
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 3rem;
     }
     .sponsors h2{
