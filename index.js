@@ -13,6 +13,8 @@ const session = require('express-session')
 const bcrypt = require('bcrypt')
 const { addUser } = require('./controller/registerController')
 const User = require('./models/user')
+const Dev = require('./models/dev')
+const Cont = require('./models/cont')
 const passport = require('passport')
 const cors = require('cors')
 
@@ -192,6 +194,29 @@ app.get('/devsuccess', (req, res) => {
 app.get('/api/data', async (req, res) => {
   try {
     const data = await User.find().exec();
+    res.json(data);
+  } catch (error) {
+    console.error('Error retrieving data:', error);
+    res.status(500).json({ error: 'Failed to retrieve data' });
+  }
+});
+
+
+app.get('/api/devbootcamp', async (req, res) => {
+  try {
+    const data = await Dev.find().exec();
+    res.json(data);
+  } catch (error) {
+    console.error('Error retrieving data:', error);
+    res.status(500).json({ error: 'Failed to retrieve data' });
+  }
+});
+
+
+
+app.get('/api/contentbootcamp', async (req, res) => {
+  try {
+    const data = await Cont.find().exec();
     res.json(data);
   } catch (error) {
     console.error('Error retrieving data:', error);
