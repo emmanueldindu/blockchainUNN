@@ -457,7 +457,7 @@ const addCont = async (req, res, next) => {
         <div style="font-size: 16px; line-height: 1.5; color: black;">
         <h1 style="font-size: 25px">Hello ${name}</h1>
         <p style="margin-top: 20px;"> Congratulations on successfully registering for the  <strong>BlockchainUNN Content Writing Bootcamp</strong></p>
-        <p styles="margin-top: 20px;">Join our <a href="https://chat.whatsapp.com/C5mja01szD7GZ76CxQPlWy ">whatsapp</a> group for updates, resources, and networking.   </p>
+        <p styles="margin-top: 20px;">Join our <a href="https://chat.whatsapp.com/DZGuErUntUu9vX3qBUgr5x ">whatsapp</a> group for updates, resources, and networking.   </p>
 
 
         
