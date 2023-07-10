@@ -156,16 +156,18 @@ app.get('/index', (req, res) => {
 })
 
 app.get('/event', (req, res) => {
-    res.render('event')
+    res.render('regClosed')
 })
 
 app.get('/devbootcamp', (req, res) => {
-  res.render('devbootcamp')
+  res.render('regClosed')
 })
 
 app.get('/contentbootcamp', (req, res) => {
-  res.render('contentbootcamp')
+  res.render('regClosed')
 })
+
+
 
 app.get('/team', (req, res) => {
   res.render('team')
